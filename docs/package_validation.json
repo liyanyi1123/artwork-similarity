@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-24",
+  "scope": "Historical packaging validation snapshot; repository publication status is tracked in Git history.",
+  "original_python_javascript_sources_unchanged": true,
+  "original_python_javascript_source_count": 85,
+  "external_bash_sql_source_count": 17,
+  "packaged_python_syntax_checks": 86,
+  "javascript_syntax_checks": 3,
+  "portable_regression_tests": 10,
+  "historical_grid_rows_compared": 30603,
+  "historical_grid_confusion_count_mismatches": 0,
+  "source_manifest_hashes_verified": true,
+  "release_documentation_links_checked": 42,
+  "broken_release_documentation_links": [],
+  "targeted_secret_scan_findings": [],
+  "personal_absolute_paths_in_packaged_text": [],
+  "smoke_tests": {
+    "clip_shape": [
+      1,
+      512
+    ],
+    "vit_shape": [
+      1,
+      768
+    ],
+    "finite_unit_vectors": true,
+    "self_comparison_similar": true,
+    "generated_readable_transforms": 32,
+    "positive_protocol_variants": 31
+  },
+  "archive_crc_verified": true,
+  "extracted_package_regression_tests_passed": true,
+  "github_upload_performed_during_packaging": false,
+  "sha256_manifest_verified_after_extraction": true,
+  "extracted_regression_summary": "Ran 10 tests; OK. No dependency on original workspace paths."
+}

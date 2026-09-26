@@ -1,0 +1,6 @@
+-r requirements.txt
+torch>=2.6,<3
+transformers>=4.46,<6
+pillow>=10,<13
+tqdm>=4.66,<5
+opencv-python-headless>=4.9,<5

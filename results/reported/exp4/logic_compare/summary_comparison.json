@@ -1,0 +1,86 @@
+{
+  "rule1_and": {
+    "description": "CLIP > 0.8 AND ViT > 0.5 → similar",
+    "thresholds": {
+      "clip": 0.8,
+      "vit": 0.5
+    },
+    "metrics": {
+      "total_pairs": 530500,
+      "positive_pairs": 31000,
+      "negative_pairs": 499500,
+      "TP": 30914,
+      "FP": 1085,
+      "TN": 498415,
+      "FN": 86,
+      "accuracy": 0.997793,
+      "precision": 0.966093,
+      "recall": 0.997226,
+      "f1": 0.981412,
+      "specificity": 0.997828
+    }
+  },
+  "rule2_or": {
+    "description": "CLIP > 0.8 OR ViT > 0.5 → similar",
+    "thresholds": {
+      "clip": 0.8,
+      "vit": 0.5
+    },
+    "metrics": {
+      "total_pairs": 530500,
+      "positive_pairs": 31000,
+      "negative_pairs": 499500,
+      "TP": 30998,
+      "FP": 14258,
+      "TN": 485242,
+      "FN": 2,
+      "accuracy": 0.97312,
+      "precision": 0.684948,
+      "recall": 0.999935,
+      "f1": 0.812998,
+      "specificity": 0.971455
+    }
+  },
+  "rule3_clip_only": {
+    "description": "CLIP > 0.8 → similar",
+    "thresholds": {
+      "clip": 0.8,
+      "vit": 0.5
+    },
+    "metrics": {
+      "total_pairs": 530500,
+      "positive_pairs": 31000,
+      "negative_pairs": 499500,
+      "TP": 30979,
+      "FP": 4371,
+      "TN": 495129,
+      "FN": 21,
+      "accuracy": 0.991721,
+      "precision": 0.876351,
+      "recall": 0.999323,
+      "f1": 0.933806,
+      "specificity": 0.991249
+    }
+  },
+  "rule4_vit_only": {
+    "description": "ViT > 0.5 → similar",
+    "thresholds": {
+      "clip": 0.8,
+      "vit": 0.5
+    },
+    "metrics": {
+      "total_pairs": 530500,
+      "positive_pairs": 31000,
+      "negative_pairs": 499500,
+      "TP": 30933,
+      "FP": 10972,
+      "TN": 488528,
+      "FN": 67,
+      "accuracy": 0.979191,
+      "precision": 0.73817,
+      "recall": 0.997839,
+      "f1": 0.848584,
+      "specificity": 0.978034
+    }
+  }
+}

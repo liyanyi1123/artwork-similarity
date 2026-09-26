@@ -1,0 +1,2242 @@
+[
+  {
+    "path": ".ppt_build_weighting/build_slide.mjs",
+    "bytes": 7543,
+    "sha256": "2c575344658a12c4d44454648ecb490d11277925f869ac29f840247b1d848b9c",
+    "lines": 255
+  },
+  {
+    "path": "Aug27/extract_clip_vit_vectors.py",
+    "bytes": 6795,
+    "sha256": "1af001cd72ddf615bfc4ba2a10d2960931ae56de99b327a36de64e6311b47e25",
+    "lines": 205,
+    "doc": "Extract normalized CLIP and ViT image vectors from an image directory.",
+    "imports": [
+      "PIL",
+      "__future__",
+      "argparse",
+      "gc",
+      "numpy",
+      "pathlib",
+      "torch",
+      "tqdm",
+      "transformers",
+      "typing"
+    ],
+    "definitions": [
+      "parse_args",
+      "collect_images",
+      "resolve_device",
+      "load_batch",
+      "extract_clip",
+      "extract_vit",
+      "save_vectors",
+      "main"
+    ]
+  },
+  {
+    "path": "Aug27/legacy_code/run_datasets6_sweep.py",
+    "bytes": 16290,
+    "sha256": "cd443d4c74a3baa5fe795a26ca54112f15ae15502754a277f982004f550d4d11",
+    "lines": 361,
+    "doc": "Compute CLIP/ViT similarities for Datasets6 and run full threshold sweep (0-1, 0.01).\nRequires transforms already generated in Transform/datasets6/.",
+    "imports": [
+      "PIL",
+      "csv",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "main"
+    ]
+  },
+  {
+    "path": "Aug27/legacy_code/run_datasets7_sweep.py",
+    "bytes": 17024,
+    "sha256": "9fd7d6e6ce8cfbeac6805885b1f267b29ca5bb598b5ce7c707e8d30315840e22",
+    "lines": 374,
+    "doc": "Compute CLIP/ViT similarities for Datasets7 (pixiv1000) and run full threshold sweep (0-1, 0.01).\nOutput format matches exp4/datasets6_sweep.",
+    "imports": [
+      "PIL",
+      "csv",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "main"
+    ]
+  },
+  {
+    "path": "Datasets5/download_100_per_style.py",
+    "bytes": 3834,
+    "sha256": "809a69d0275287c666f928c44848e181ec256ae372d256f06ad7107485daa62d",
+    "lines": 113,
+    "doc": "Download 100 images per art style from ArtBench-10 CSV.",
+    "imports": [
+      "concurrent.futures",
+      "csv",
+      "pathlib",
+      "ssl",
+      "sys",
+      "urllib.request"
+    ],
+    "definitions": [
+      "download_one",
+      "main"
+    ]
+  },
+  {
+    "path": "Datasets5/fix_ukiyoe.py",
+    "bytes": 3778,
+    "sha256": "2e34506923a74bcc41dd57b9fda12a79359e7db4a547e5818983b0345b0482bb",
+    "lines": 110,
+    "doc": "Parallel download + validate ukiyo_e images, replacing corrupted ones.",
+    "imports": [
+      "concurrent.futures",
+      "csv",
+      "cv2",
+      "numpy",
+      "pathlib",
+      "ssl",
+      "sys",
+      "urllib.request"
+    ],
+    "definitions": [
+      "is_valid",
+      "download_one",
+      "main"
+    ]
+  },
+  {
+    "path": "Datasets6/download_wikiart_1000.py",
+    "bytes": 5376,
+    "sha256": "4ae06fd31daa0125ef6817fca54d3e3c9feae9c19be1a32b1c4e7f11e0762187",
+    "lines": 163,
+    "doc": "Download 1000 images from wikiart CDN using ArtBench-10.csv URLs.",
+    "imports": [
+      "concurrent.futures",
+      "csv",
+      "pathlib",
+      "ssl",
+      "sys",
+      "time",
+      "urllib.request"
+    ],
+    "definitions": [
+      "download_one",
+      "main"
+    ]
+  },
+  {
+    "path": "PaperFigures_Sep14/02_fig2_workflow/system_implementation_flowchart.py",
+    "bytes": 8342,
+    "sha256": "6e4bc4ce5fe65b2eaa9c16fb2677f66176643452ce3138da019490c7e761136f",
+    "lines": 261,
+    "doc": "",
+    "imports": [
+      "matplotlib.patches",
+      "matplotlib.pyplot",
+      "pathlib"
+    ],
+    "definitions": [
+      "rounded_box",
+      "panel",
+      "arrow"
+    ]
+  },
+  {
+    "path": "PaperFigures_Sep14/09_method_comparison/make_method_comparison.py",
+    "bytes": 14609,
+    "sha256": "acc45049306b0c770cec03c24e324071add5eb457368879ee11b8dcdc820afac",
+    "lines": 295,
+    "doc": "方法对比图 v2 —— 补充 PR 曲线与公平对比\n\n改进点：\n1. 用二维直方图 + 反向累积和，精确且极快地枚举全部 (t_C, t_V) 组合，\n   得到联合规则的 Pareto 前沿，避免逐组合做 530k 次布尔运算。\n2. CLIP 单路 / ViT 单路各自独立扫阈值（各自取自己的最优点），\n   与论文\"每个基线在标定集上自行选阈值\"的口径一致 —— 这才是公平对比。\n3. 决策空间图：画出全部 FP，仅对背景负样本降采样；图例移出绘图区。",
+    "imports": [
+      "matplotlib",
+      "matplotlib.patches",
+      "matplotlib.pyplot",
+      "numpy",
+      "os"
+    ],
+    "definitions": [
+      "sweep_1d",
+      "score"
+    ]
+  },
+  {
+    "path": "analysis/ComprehensiveAnalysisAug3/generate_threshold_excel.py",
+    "bytes": 10113,
+    "sha256": "4c1bf4b41d6f6f8e1750e28de93349c1b2ee488482102cd70c6d0dff6c7426c3",
+    "lines": 263,
+    "doc": "Generate a 4-sheet Excel file: threshold evaluation summary for datasets1-4.\nCLIP thresholds: 0.80–0.85 (step 0.01)\nViT thresholds:  0.40–0.50 (step 0.01)",
+    "imports": [
+      "numpy",
+      "pandas",
+      "pathlib",
+      "re",
+      "xlsxwriter"
+    ],
+    "definitions": [
+      "compute_from_raw",
+      "extract_from_grid",
+      "save_excel",
+      "main"
+    ]
+  },
+  {
+    "path": "analysis/Papersep11/export_fn_fp.py",
+    "bytes": 10663,
+    "sha256": "3dffc586eea955f434f38cdd0714393a4f4250eaed8c2b929dc67c9b8a2365db",
+    "lines": 237,
+    "doc": "Export the paper's FP/FN image pairs at CLIP > 0.87 AND ViT > 0.50.",
+    "imports": [
+      "__future__",
+      "argparse",
+      "collections",
+      "concurrent.futures",
+      "csv",
+      "hashlib",
+      "json",
+      "numpy",
+      "pathlib",
+      "shutil"
+    ],
+    "definitions": [
+      "current_transform_path",
+      "collect_pairs",
+      "sha256",
+      "export"
+    ]
+  },
+  {
+    "path": "analysis/threshold_eval_datasets1/export_overall_summary_to_excel.py",
+    "bytes": 22338,
+    "sha256": "c0bacba93c7f1212d490e78decefa2f49b6fab871b338fe203793933a785dcea",
+    "lines": 532,
+    "doc": "导出阈值实验结果到 Excel，包括：\n1. Overall 摘要\n2. 固定 CLIP=0.8 的 ViT 单变量扫描\n3. CLIP x ViT 的 126 组组合结果\n4. 折线图与热力图",
+    "imports": [
+      "numpy",
+      "pandas",
+      "pathlib",
+      "sys"
+    ],
+    "definitions": [
+      "load_overall_summary",
+      "build_overall_metrics_dataframe",
+      "evaluate",
+      "build_threshold_sweep_dataframe",
+      "build_clip_vit_grid_dataframe",
+      "build_best_configs_dataframe",
+      "build_heatmap_matrix",
+      "add_multi_clip_chart",
+      "format_dataframe_sheet",
+      "apply_heatmap_conditional_formatting",
+      "export_to_excel",
+      "main"
+    ]
+  },
+  {
+    "path": "analysis/threshold_eval_datasets1/plot_vit_similarity_ai_art1_vs_others.py",
+    "bytes": 4712,
+    "sha256": "657b3c9c52bd8e118927aacb4c6e7f557055248605cef640fe831438aa6d9d4f",
+    "lines": 138,
+    "doc": "Plot ViT similarity between ai_art1.jpg and the other 99 original archive images.",
+    "imports": [
+      "PIL",
+      "matplotlib.pyplot",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "src.utils.file_manager",
+      "sys",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "collect_archive_images",
+      "load_vit_model",
+      "compute_embeddings",
+      "build_similarity_dataframe",
+      "make_plot",
+      "main"
+    ]
+  },
+  {
+    "path": "analysis/threshold_eval_datasets1/run_threshold_eval.py",
+    "bytes": 13048,
+    "sha256": "4d1fdc04d75235066516b30c043e653083782a33d0dccac6d189b3754f9ed3a9",
+    "lines": 339,
+    "doc": "新实验：\n- CLIP：检测 3100 张图片（100张原图×31种变换，排除F2），阈值 0.8，高于判定为相似（正样本）\n- ViT：检测 100 张原图之间的 4950 对，阈值 0.5，低于判定为不相似（负样本）\n- 统计 TP, TN, FP, FN",
+    "imports": [
+      "PIL",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "src.utils.file_manager",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers",
+      "warnings"
+    ],
+    "definitions": [
+      "build_evaluation_pairs",
+      "load_models",
+      "compute_clip_similarity",
+      "compute_vit_similarity",
+      "evaluate",
+      "main"
+    ]
+  },
+  {
+    "path": "analysis/threshold_evaluation/src/clip_all_fallback_comparison.py",
+    "bytes": 14405,
+    "sha256": "12389630fd680775d6977eac6d7bc2ae9dce19a53d898a22757398e13971cd6d",
+    "lines": 470,
+    "doc": "Compare CLIP baseline and CLIP+6 fallback strategies in one table and one chart.\n\nStrategies:\n- CLIP only\n- CLIP + ViT\n- CLIP + pHash\n- CLIP + aHash\n- CLIP + dHash\n- CLIP + wHash\n- CLIP + PDQ\n\nRule:\n1. If CLIP similarity >= 0.90, count as correct.\n2. If CLIP similarity < 0.90, try one fallback metric.\n3. If fallback similarity > 0.90, count as a rescued correct case.\n\nThis script reads the existing Excel reports in ``ex1_2/table`` directly and\ndoes not rerun any image models. By default it excludes:\n- ``F2_Vertical_flip`` rows\n- ``test_report.xlsx``",
+    "imports": [
+      "__future__",
+      "argparse",
+      "dataclasses",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "pathlib",
+      "re",
+      "src.utils.file_manager",
+      "sys",
+      "xlsxwriter",
+      "xml.etree",
+      "zipfile"
+    ],
+    "definitions": [
+      "ReportRow",
+      "parse_args",
+      "load_shared_strings",
+      "get_cell_value",
+      "read_sheet_rows",
+      "iter_report_rows",
+      "analyze_methods",
+      "save_excel",
+      "plot_line_comparison",
+      "main"
+    ]
+  },
+  {
+    "path": "analysis/threshold_evaluation/src/threshold_evaluation.py",
+    "bytes": 14029,
+    "sha256": "e47f870a6663ffe6a75408a7d3e17bc3ec6131953828e1ccc376201900c2b70f",
+    "lines": 349,
+    "doc": "Threshold Evaluation @ 0.87 — CLIP + pHash fallback for positives\n=================================================================\nPositive pairs: each original image vs its 31 non-F2 variations → 3100 pairs (label=1)\nNegative pairs: all pairs of different original images → 4950 pairs (label=0)\n\nMetrics: TP, TN, FP, FN, Recall, Precision, Accuracy, F1",
+    "imports": [
+      "PIL",
+      "imagehash",
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "src.utils.file_manager",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers",
+      "warnings"
+    ],
+    "definitions": [
+      "build_evaluation_pairs",
+      "load_models",
+      "compute_clip_similarity",
+      "compute_phash_similarity",
+      "compute_positive_predictions_with_fallback",
+      "evaluate",
+      "main"
+    ]
+  },
+  {
+    "path": "analysis/threshold_evaluation/src/vit_all_fallback_4thresholds.py",
+    "bytes": 11484,
+    "sha256": "174b0244f7d33032e5c63cf626e4305c7ba41b9f030e5111dd0a82faec9a4aad",
+    "lines": 352,
+    "doc": "Use ViT as the baseline and compare six fallback strategies across four thresholds.\n\nStrategies:\n- ViT only\n- ViT + CLIP\n- ViT + pHash\n- ViT + aHash\n- ViT + dHash\n- ViT + wHash\n- ViT + PDQ\n\nFor each threshold in {0.90, 0.89, 0.88, 0.87}:\n1. If ViT similarity >= threshold, count as correct.\n2. If ViT similarity < threshold, try one fallback metric.\n3. If fallback similarity > threshold, count as a rescued correct case.\n\nOutputs:\n- One Excel file per threshold\n- One combined four-threshold line chart",
+    "imports": [
+      "__future__",
+      "dataclasses",
+      "datetime",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "pathlib",
+      "re",
+      "src.utils.file_manager",
+      "sys",
+      "xlsxwriter",
+      "xml.etree",
+      "zipfile"
+    ],
+    "definitions": [
+      "ReportRow",
+      "load_shared_strings",
+      "get_cell_value",
+      "read_sheet_rows",
+      "iter_report_rows",
+      "analyze_threshold",
+      "save_excel",
+      "plot_combined_line",
+      "main"
+    ]
+  },
+  {
+    "path": "app.py",
+    "bytes": 7425,
+    "sha256": "b53092bd17feffed16c3cd7d98f096b8825107230c3664bdb5567286d826ccf8",
+    "lines": 216,
+    "doc": "",
+    "imports": [
+      "PIL",
+      "clip",
+      "flask",
+      "numpy",
+      "os",
+      "time",
+      "torch",
+      "transformers"
+    ],
+    "definitions": [
+      "get_clip_embedding",
+      "get_vit_embedding",
+      "compute_reference_embeddings",
+      "load_reference_embeddings",
+      "append_embedding",
+      "find_top_k",
+      "predict",
+      "update",
+      "health"
+    ]
+  },
+  {
+    "path": "docs/ppt-output/runs/20260629-image-perception/generate_ppt.py",
+    "bytes": 15912,
+    "sha256": "ce62b03b90a9e5bdf0a3bf600ba7a3b58ab5424e1649df2b55f88299009f8781",
+    "lines": 437,
+    "doc": "Generate a 4-slide academic PPTX about image perception comparison experiments.",
+    "imports": [
+      "pathlib",
+      "pptx",
+      "pptx.dml.color",
+      "pptx.enum.shapes",
+      "pptx.enum.text",
+      "pptx.util"
+    ],
+    "definitions": [
+      "add_bg",
+      "add_title_bar",
+      "add_text_box",
+      "add_rich_text_box",
+      "add_card",
+      "add_flow_arrow",
+      "add_page_number"
+    ]
+  },
+  {
+    "path": "download_openimages_100.py",
+    "bytes": 9671,
+    "sha256": "2266db6e1e1fe0744cb99ba5ba930aa974ec6e30c2f058844bd56ce95ab65b40",
+    "lines": 287,
+    "doc": "Expand existing 10-class Open Images dataset from 10 to 100 images per class.\nPreserves existing images at positions 01-10, adds 90 new ones as 11-100.",
+    "imports": [
+      "__future__",
+      "boto3",
+      "botocore",
+      "collections",
+      "concurrent",
+      "pathlib",
+      "re",
+      "requests",
+      "tqdm"
+    ],
+    "definitions": [
+      "read_existing_ids",
+      "pick_additional_ids",
+      "_download_one",
+      "download_new_images",
+      "update_sources",
+      "main"
+    ]
+  },
+  {
+    "path": "download_pixiv_1000.py",
+    "bytes": 4119,
+    "sha256": "6615a5fad3726ef4abdbdffdf007d0c397c7452dc4fe5b84142fec09bffa97a7",
+    "lines": 129,
+    "doc": "Download 1000 Pixiv images using parallel downloads via pixiv.cat proxy.\n\nExtracts Pixiv illustration IDs from the dataset and downloads via proxy services\nwith ThreadPoolExecutor for speed.",
+    "imports": [
+      "concurrent.futures",
+      "datasets",
+      "os",
+      "re",
+      "requests",
+      "sys",
+      "time"
+    ],
+    "definitions": [
+      "extract_pixiv_id",
+      "download_image",
+      "main"
+    ]
+  },
+  {
+    "path": "download_pixiv_supplement.py",
+    "bytes": 6202,
+    "sha256": "340f20429a11c68f7643a98e4ce44918f0c5052a252e2b469175c7265d4fcbe0",
+    "lines": 177,
+    "doc": "Supplement datasets7 to 1000 Pixiv images.\n\nKeeps existing numeric-ID images and downloads more from the\nChars/pixiv-top-daily-illustration-2019-2020 dataset via the pixiv.cat proxy\nuntil the folder holds 1000 valid images.\n\nRate-limit friendly: LOW concurrency + jittered delays, because pixiv.cat\nblocks aggressive parallel bursts. Failed IDs are retried in later rounds.",
+    "imports": [
+      "concurrent.futures",
+      "datasets",
+      "os",
+      "random",
+      "re",
+      "requests",
+      "time"
+    ],
+    "definitions": [
+      "extract_pixiv_id",
+      "existing_numeric_ids",
+      "load_candidates",
+      "save_candidates",
+      "collect_more",
+      "download_image",
+      "main"
+    ]
+  },
+  {
+    "path": "downloader.py",
+    "bytes": 4244,
+    "sha256": "614947a4f8d8063292a5e5583c30b29e8b636de283949014b7a13ea5535cdb0b",
+    "lines": 129,
+    "doc": "Open Images image downloader.\n\nThis script downloads a subset of Open Images images, given a list of image ids.\nTypical uses of this tool might be downloading images:\n- That contain a certain category.\n- That have been annotated with certain types of annotations (e.g. Localized\nNarratives, Exhaustively annotated people, etc.)\n\nThe input file IMAGE_LIST should be a text file containing one image per line\nwith the format <SPLIT>/<IMAGE_ID>, where <SPLIT> is either \"train\", \"test\",\n\"validation\", or \"challenge2018\"; and <IMAGE_ID> is the image ID that uniquely\nidentifies the image in Open Images. A sample file could be:\n  train/f9e0434389a1d4dd\n  train/1a007563ebc18664\n  test/ea8bfd4e765304db",
+    "imports": [
+      "argparse",
+      "boto3",
+      "botocore",
+      "concurrent",
+      "os",
+      "re",
+      "sys",
+      "tqdm"
+    ],
+    "definitions": [
+      "check_and_homogenize_one_image",
+      "check_and_homogenize_image_list",
+      "read_image_list_file",
+      "download_one_image",
+      "download_all_images"
+    ]
+  },
+  {
+    "path": "ex1_2/Similarity_compare/clip_similarity.py",
+    "bytes": 19063,
+    "sha256": "52618a64cb868b5c67d0e1bce5f9dfb81424a602ebde369e0211692e6dbcce54",
+    "lines": 469,
+    "doc": "CLIP, ViT & Perceptual Hash Image Similarity Comparison\n========================================================\nCompares all 100 images from the Archive directory using 7 algorithms:\n\n  Deep embeddings:\n    1. CLIP  (ViT-B/32)  — 512-dim joint vision-language\n    2. ViT   (ViT-B/16)  — 768-dim [CLS] token\n\n  Perceptual hashes:\n    3. aHash — Average Hash          (64-bit)\n    4. pHash — Perceptual / DCT Hash (64-bit)\n    5. dHash — Difference Hash       (64-bit)\n    6. wHash — Wavelet Hash          (64-bit)\n    7. PDQ   — Facebook PDQ Hash     (256-bit)\n\nFor hashes: similarity = 1 − Hamming_distance / max_bits",
+    "imports": [
+      "PIL",
+      "imagehash",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "pdqhash",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers",
+      "warnings"
+    ],
+    "definitions": [
+      "gather_images",
+      "load_pil_images",
+      "load_clip_model",
+      "load_vit_model",
+      "extract_clip_embeddings",
+      "extract_vit_embeddings",
+      "compute_hash_similarity_matrix",
+      "compute_hashes_ahash",
+      "compute_hashes_phash",
+      "compute_hashes_dhash",
+      "compute_hashes_whash",
+      "compute_hashes_pdq",
+      "compute_cosine_similarity_matrix",
+      "save_results",
+      "run_pipeline",
+      "main"
+    ]
+  },
+  {
+    "path": "ex1_2/Similarity_compare/threshold_evaluation.py",
+    "bytes": 13315,
+    "sha256": "b5c4e8b55236bbbfda6347f3daa7dbcfa791f835f764305b4fca792dc4830ebe",
+    "lines": 309,
+    "doc": "Threshold Evaluation @ 0.9 — CLIP & ViT\n=======================================\nPositive pairs: each original image vs its 31 non-F2 variations → 3100 pairs (label=1)\nNegative pairs: all pairs of different original images → 4950 pairs (label=0)\n\nMetrics: TP, TN, FP, FN, Recall, Precision, Accuracy, F1",
+    "imports": [
+      "PIL",
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers",
+      "warnings"
+    ],
+    "definitions": [
+      "build_evaluation_pairs",
+      "load_models",
+      "compute_clip_similarity",
+      "compute_vit_similarity",
+      "evaluate",
+      "main"
+    ]
+  },
+  {
+    "path": "ex1_2/auto_perception_ex1.py",
+    "bytes": 11157,
+    "sha256": "7ad606f8392365b958868c755433857aaa0b47a72652b45d3dabfbab6ab7c970",
+    "lines": 277,
+    "doc": "",
+    "imports": [
+      "PIL",
+      "glob",
+      "io",
+      "os",
+      "perception",
+      "torch",
+      "transformers",
+      "xlsxwriter"
+    ],
+    "definitions": [
+      "get_image_files",
+      "get_hashers",
+      "precompute_hashes",
+      "compute_distances",
+      "get_vit_embedding",
+      "get_clip_embedding",
+      "prepare_thumbnail",
+      "compare_folders"
+    ]
+  },
+  {
+    "path": "ex1_2/auto_perception_ex2.py",
+    "bytes": 12826,
+    "sha256": "9bab01f36164b5d3db2c02a6cd7b3e1235307f0411397bfdd66ff7ee85f3726c",
+    "lines": 322,
+    "doc": "",
+    "imports": [
+      "PIL",
+      "glob",
+      "io",
+      "os",
+      "pathlib",
+      "perception",
+      "sklearn.metrics.pairwise",
+      "torch",
+      "transformers",
+      "xlsxwriter"
+    ],
+    "definitions": [
+      "get_image_files",
+      "get_hashers",
+      "precompute_hashes",
+      "compute_distances",
+      "get_vit_embedding",
+      "get_clip_embedding",
+      "prepare_thumbnail",
+      "write_report_for_reference",
+      "compare_folders"
+    ]
+  },
+  {
+    "path": "ex1_2/benchmark_pipeline.py",
+    "bytes": 4316,
+    "sha256": "4a92246cc6207fb7239ea99f824f4fb8675c5a8a7ec39296fe260a7a191e2d2f",
+    "lines": 137,
+    "doc": "Run the ex1_2 pipeline for multiple batch sizes with precise per-step timing.\n\nUsage:\n    python benchmark_pipeline.py",
+    "imports": [
+      "__future__",
+      "auto_perception_ex2",
+      "datetime",
+      "generate_ex2",
+      "json",
+      "pathlib",
+      "plot_ex2",
+      "plot_summary",
+      "sys",
+      "time"
+    ],
+    "definitions": [
+      "td",
+      "run_one",
+      "main"
+    ]
+  },
+  {
+    "path": "ex1_2/generate_ex1.py",
+    "bytes": 6711,
+    "sha256": "8b941c54f26fb708a42937eb1d8661869df2e91bcc42426926ca49868d281e1b",
+    "lines": 185,
+    "doc": "12 base image operations — generate all combinations of 1, 2, 3, and 4 operations\nTotal: C(12,1) + C(12,2) + C(12,3) + C(12,4) = 12 + 66 + 220 + 495 = 793 output images.",
+    "imports": [
+      "cv2",
+      "itertools",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "op_F1",
+      "op_F2",
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "apply_operations",
+      "main"
+    ]
+  },
+  {
+    "path": "ex1_2/generate_ex2.py",
+    "bytes": 9613,
+    "sha256": "f6fa3fedb2e40c4da5cb3fa876ec44d4812f0a4268b5896528208eda932693d0",
+    "lines": 250,
+    "doc": "Generate image variations using 12 base operations.\nFor each tunable operation, produce 3 subtle settings (low / mid / high)\nthat are specific to that operation.\nFilenames include the level and the actual parameter values.\n\nNow loops over all images in the 'Images' folder.\nEach image gets its own output subfolder (named after the image stem).",
+    "imports": [
+      "cv2",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "op_F1",
+      "op_F2",
+      "get_image_files",
+      "main"
+    ]
+  },
+  {
+    "path": "ex1_2/plot_ex1.py",
+    "bytes": 11631,
+    "sha256": "7232af2fb4c1db48449b69d3b79b1b410a21445f47eed0f5acc7975c478f3c0a",
+    "lines": 266,
+    "doc": "Plot charts from test_report.xlsx — ViT/CLIP + hash similarities for 793 combinations.",
+    "imports": [
+      "collections",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "openpyxl",
+      "pathlib"
+    ],
+    "definitions": []
+  },
+  {
+    "path": "ex1_2/plot_ex2.py",
+    "bytes": 26242,
+    "sha256": "74cebcf3b68f52439164be7c3ee60a31eb15ae5278845842a6783178bcb75db3",
+    "lines": 629,
+    "doc": "Plot charts from all *_report.xlsx files in the table directory.",
+    "imports": [
+      "collections",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "openpyxl",
+      "pathlib"
+    ],
+    "definitions": [
+      "to_f",
+      "parse_report_data",
+      "plot_bars",
+      "plot_lines",
+      "hash_bar_plot",
+      "hash_line_plot",
+      "save_plots_for_report",
+      "save_summary_chart",
+      "save_low_level_transform_summary",
+      "main"
+    ]
+  },
+  {
+    "path": "ex1_2/plot_summary.py",
+    "bytes": 13848,
+    "sha256": "e3ab41e65d9542309f3c73d5040872fb74290ee8e0530efdd8dab06c16a2b500",
+    "lines": 375,
+    "doc": "Generate summary charts from ex1_2 report Excel files.\n\nThis script reads all *_report.xlsx files under the report directory and\nproduces the same summary charts that live in ex1_2/plot/summary_ai_art.",
+    "imports": [
+      "__future__",
+      "argparse",
+      "collections",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "openpyxl",
+      "pathlib"
+    ],
+    "definitions": [
+      "to_float",
+      "parse_report_data",
+      "load_all_reports",
+      "save_vit_summary",
+      "save_clip_summary",
+      "save_hash_summary",
+      "save_each_hash_summary",
+      "build_level_buckets",
+      "save_transformer_level_summary",
+      "save_hash_level_summary",
+      "save_combined_transformer_hash_summary",
+      "save_low_level_transform_summary",
+      "build_summary_charts",
+      "parse_args"
+    ]
+  },
+  {
+    "path": "ex1_2/run_pipeline.py",
+    "bytes": 3291,
+    "sha256": "58351795466258437faa2de944a89d0b98ccf0a8084db91dd400b1241441b029",
+    "lines": 102,
+    "doc": "Run the full ex1_2 pipeline end to end.\n\nSteps:\n1. Generate image outputs from source images using ex1_2/generate_ex2.py.\n2. Compare generated outputs with reference images using ex1_2/auto_perception_ex2.py.\n3. Plot charts from generated reports using ex1_2/plot_ex2.py.\n4. Generate summary charts from the same reports using ex1_2/plot_summary.py.\n\nUsage:\n    python run_pipeline.py --image-dir ../Images/ex2_ai_art",
+    "imports": [
+      "__future__",
+      "argparse",
+      "auto_perception_ex2",
+      "generate_ex2",
+      "pathlib",
+      "plot_ex2",
+      "plot_summary",
+      "sys"
+    ],
+    "definitions": [
+      "run_pipeline",
+      "parse_args"
+    ]
+  },
+  {
+    "path": "exp4/generate_datasets6_transforms.py",
+    "bytes": 6640,
+    "sha256": "2dc04476ba64046d48d38c9227f7907189021d150b884db96572495ba92785ae",
+    "lines": 179,
+    "doc": "Generate 32 image transforms for Datasets6 (reuses same operations as Datasets5).",
+    "imports": [
+      "concurrent.futures",
+      "cv2",
+      "numpy",
+      "pathlib",
+      "time"
+    ],
+    "definitions": [
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "op_F1",
+      "op_F2",
+      "process_one",
+      "gather_images",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/generate_datasets7_transforms.py",
+    "bytes": 6293,
+    "sha256": "c4348f48bce1a4677681f8f7ff07272e7b2dd4be228f56057a8b145743e56d33",
+    "lines": 173,
+    "doc": "Generate 32 image transforms for datasets7 (pixiv1000 anime images).",
+    "imports": [
+      "concurrent.futures",
+      "cv2",
+      "numpy",
+      "pathlib",
+      "time"
+    ],
+    "definitions": [
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "op_F1",
+      "op_F2",
+      "process_one",
+      "gather_images",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/logic_compare/run_comparison.py",
+    "bytes": 7798,
+    "sha256": "769e9dbe12912011b74eddc8d01f9d15d568c4bf8bb3b38a7dcc46f73ae1089e",
+    "lines": 170,
+    "doc": "Compare 4 decision logic rules on all Datasets5 pairs.\n\nRules:\n  1. AND:       CLIP > 0.8 AND ViT > 0.5\n  2. OR:        CLIP > 0.8 OR  ViT > 0.5\n  3. CLIP-only: CLIP > 0.8\n  4. ViT-only:  ViT > 0.5\n\nReuses precomputed similarities from exp4 without reloading models.",
+    "imports": [
+      "__future__",
+      "csv",
+      "json",
+      "numpy",
+      "pathlib",
+      "time"
+    ],
+    "definitions": [
+      "gather_originals",
+      "metrics",
+      "save_rule",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/plot_datasets7_least_similar.py",
+    "bytes": 5546,
+    "sha256": "c70cf9ae8544183adce2098b4c11390c223c112b2f025eda5d355304e80e8606",
+    "lines": 152,
+    "doc": "Render the 10 least similar original image pairs from Datasets7 in one image.\n\nThe output is saved to exp4/datasets7_sweep/datasets7_top10_least_similar.png.",
+    "imports": [
+      "PIL",
+      "__future__",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "gather_original_paths",
+      "load_embeddings",
+      "normalize",
+      "compute_least_similar_pairs",
+      "load_thumbnail",
+      "load_font",
+      "render_image",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/plot_datasets7_top10_most_similar_negative_pairs.py",
+    "bytes": 6435,
+    "sha256": "1f5bdac4df1b3fb800e78e57e5faa78474ca6ca318d93a2ff9a0d3e83483f34a",
+    "lines": 164,
+    "doc": "Render the 10 most similar negative original-image pairs in Datasets7.\n\nThese are different original images, evaluated by CLIP and ViT cosine similarity.",
+    "imports": [
+      "PIL",
+      "__future__",
+      "csv",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "gather_original_paths",
+      "load_embeddings",
+      "normalize",
+      "find_top_negative_pairs",
+      "load_thumbnail",
+      "load_font",
+      "render_image",
+      "save_csv",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/plot_f1_vs_clip_top10_large.py",
+    "bytes": 4431,
+    "sha256": "937e1515556f017fe49e8eb384df9b6699630f5c53de8caf696114adf01abf82",
+    "lines": 142,
+    "doc": "Plot WikiArt F1 against CLIP for the ten strongest ViT thresholds.",
+    "imports": [
+      "csv",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "load_rows",
+      "build_matrix",
+      "top_vit_thresholds",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/plot_f1_vs_vit_top10_large.py",
+    "bytes": 4408,
+    "sha256": "579be7c262b2ab897dc6702448fe04640e2f787a6fbd2954c1f18926c4826abd",
+    "lines": 141,
+    "doc": "Plot WikiArt F1 against ViT for the ten strongest CLIP thresholds.",
+    "imports": [
+      "csv",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "load_rows",
+      "build_matrix",
+      "top_clip_thresholds",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/replot_top10.py",
+    "bytes": 5564,
+    "sha256": "d85b36004b2faafbfc066a882cfb34a58b066ec42b388d3d8819d2296572452f",
+    "lines": 136,
+    "doc": "Re-render f1_vs_clip_top10.png from an existing threshold_sweep_summary.csv.\n\nThe original plotting code hard-coded ylim=(0.97, 1.0), which is only correct for\ndatasets6 (F1 ~ 0.99). For any sweep whose best F1 falls below 0.97 the curves are\ndrawn entirely outside the axes and the figure comes out blank.\n\nHere the axis window is derived from the data:\n  * y spans a fixed band below the global best F1, so the top-10 curves separate\n  * x is cropped to the region where at least one curve is inside that band\n\nUsage:\n    python replot_top10.py datasets7_sweep \"Datasets7\"\n    python replot_top10.py datasets6_sweep \"Datasets6\"",
+    "imports": [
+      "csv",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib",
+      "sys"
+    ],
+    "definitions": [
+      "load_rows",
+      "build_matrix",
+      "top10_vit",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/run_datasets6_pipeline.py",
+    "bytes": 26939,
+    "sha256": "0f8ab3277fa429c720dde0694879cfa865d9413def17ef9c03267ca91cc8a5eb",
+    "lines": 649,
+    "doc": "Complete pipeline for Datasets6 threshold sweep:\n1. Organize images into style subdirectories\n2. Generate 32 transforms per image\n3. Compute CLIP/ViT similarities (positive + negative pairs)\n4. Run full sweep (ViT 0-1, CLIP 0-1, step 0.01)\n5. Generate comparison charts\n\nAll output saved to exp4/datasets6_sweep/",
+    "imports": [
+      "PIL",
+      "__future__",
+      "concurrent.futures",
+      "csv",
+      "cv2",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib",
+      "subprocess",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "step1_organize_images",
+      "step2_generate_transforms",
+      "step3_compute_similarities",
+      "step4_run_sweep",
+      "step5_generate_charts",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/run_datasets6_sweep.py",
+    "bytes": 16290,
+    "sha256": "cd443d4c74a3baa5fe795a26ca54112f15ae15502754a277f982004f550d4d11",
+    "lines": 361,
+    "doc": "Compute CLIP/ViT similarities for Datasets6 and run full threshold sweep (0-1, 0.01).\nRequires transforms already generated in Transform/datasets6/.",
+    "imports": [
+      "PIL",
+      "csv",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/run_datasets7_sweep.py",
+    "bytes": 17024,
+    "sha256": "9fd7d6e6ce8cfbeac6805885b1f267b29ca5bb598b5ce7c707e8d30315840e22",
+    "lines": 374,
+    "doc": "Compute CLIP/ViT similarities for Datasets7 (pixiv1000) and run full threshold sweep (0-1, 0.01).\nOutput format matches exp4/datasets6_sweep.",
+    "imports": [
+      "PIL",
+      "csv",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/run_exp4.py",
+    "bytes": 11462,
+    "sha256": "cceb69836b0e28eefb3bf4fe56a38963d19c71216700caeaefdefb9778ddfcb9",
+    "lines": 248,
+    "doc": "Evaluate the fixed CLIP+ViT rule on every Datasets5 pair.\n\nRule: predict similar only when CLIP cosine similarity > 0.8 AND\nViT cosine similarity > 0.5.  Existing Datasets5 embeddings are reused;\nonly the missing ViT embeddings for the 31,000 transformed positive images\nare computed here.",
+    "imports": [
+      "PIL",
+      "__future__",
+      "argparse",
+      "csv",
+      "json",
+      "numpy",
+      "os",
+      "pathlib",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "gather_original_paths",
+      "calculate_positive_vit",
+      "metrics",
+      "write_positive_rows",
+      "write_negative_rows",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/run_single_model_comparison_sep14.py",
+    "bytes": 7282,
+    "sha256": "ba320d34543ee5b81baeff7d926cf948d817b828fff07eb8250639c1b01dc0dc",
+    "lines": 187,
+    "doc": "Evaluate CLIP-only and ViT-only rules on Datasets5 and Datasets6.",
+    "imports": [
+      "__future__",
+      "csv",
+      "json",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "metrics",
+      "load_clip_scores",
+      "load_vit_scores",
+      "evaluate_dataset",
+      "merge_results",
+      "metrics_from_counts",
+      "write_outputs",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/summaryAug25/.pptx_build_threshold/build_weighted_threshold_slide.mjs",
+    "bytes": 11073,
+    "sha256": "e8ee9f4a231141eff9b68693d456c179f865595e271460dac497eb06f285aedd",
+    "lines": 240
+  },
+  {
+    "path": "exp4/threshold_eval/full_sweep/plot_comparison.py",
+    "bytes": 8444,
+    "sha256": "f015c9efebaa9807bc295d5afff659e9d2700f3bb708e7886bcb400289a187c2",
+    "lines": 201,
+    "doc": "Generate comparison charts for full threshold sweep.",
+    "imports": [
+      "csv",
+      "json",
+      "matplotlib.patches",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": []
+  },
+  {
+    "path": "exp4/threshold_eval/full_sweep_0_1.py",
+    "bytes": 9059,
+    "sha256": "44f8c5a33ae2f57939f6d8917d28008fb4ea31dadb3ba785850c708102f35b83",
+    "lines": 209,
+    "doc": "Full sweep: ViT 0.00–1.00 × CLIP 0.00–1.00, step 0.01 (10,201 combinations).\nReuses precomputed similarities — no model reloading.",
+    "imports": [
+      "__future__",
+      "csv",
+      "json",
+      "numpy",
+      "pathlib",
+      "time"
+    ],
+    "definitions": [
+      "gather_originals",
+      "metrics",
+      "evaluate_combination",
+      "main"
+    ]
+  },
+  {
+    "path": "exp4/threshold_eval/plot_heatmaps.py",
+    "bytes": 3034,
+    "sha256": "4c57532cf1cca5a2228ecc143c26d447e2e56538b7f7cd0edc031fea47493083",
+    "lines": 85,
+    "doc": "Generate two heatmaps: F1 score and False Positives for threshold sweep.",
+    "imports": [
+      "csv",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "build_matrix"
+    ]
+  },
+  {
+    "path": "exp4/threshold_eval/sweep_thresholds.py",
+    "bytes": 10269,
+    "sha256": "3ff349d165c222acfcf3a2748d50d108cf6ed7e0079371d0ce52d2d23cb4278f",
+    "lines": 250,
+    "doc": "Sweep CLIP and ViT thresholds with AND logic, comparing all combinations.\n\nViT thresholds:  0.50, 0.51, 0.52, 0.53, 0.54, 0.55\nCLIP thresholds: 0.80, 0.81, 0.82, 0.83, 0.84, 0.85\nLogic: CLIP > clip_thr AND ViT > vit_thr → similar\n\nReuses precomputed similarities from exp4 — no model reloading.",
+    "imports": [
+      "__future__",
+      "csv",
+      "json",
+      "numpy",
+      "pathlib",
+      "time"
+    ],
+    "definitions": [
+      "gather_originals",
+      "metrics",
+      "evaluate_combination",
+      "main"
+    ]
+  },
+  {
+    "path": "final/compare.py",
+    "bytes": 6791,
+    "sha256": "4fd26076545ed2a65568b7c1d0c7d195c174821225bac7778dc6fb22e87f9edb",
+    "lines": 183,
+    "doc": "Image Similarity Comparator using CLIP and ViT\n\nCompares all images in two folders pairwise (Cartesian product). For each pair,\nit computes cosine similarity with CLIP and ViT embeddings. It prints \"similar\"\nif CLIP similarity > CLIP_THRESHOLD AND ViT similarity > VIT_THRESHOLD,\notherwise \"different\".",
+    "imports": [
+      "PIL",
+      "argparse",
+      "clip",
+      "glob",
+      "os",
+      "torch",
+      "torch.nn.functional",
+      "transformers"
+    ],
+    "definitions": [
+      "load_clip_model",
+      "load_vit_model",
+      "get_clip_embedding",
+      "get_vit_embedding",
+      "compute_similarity",
+      "main"
+    ]
+  },
+  {
+    "path": "gen_top10_vit_ds5.py",
+    "bytes": 4849,
+    "sha256": "c2b8bd6ce3fe11396b8717a49873d379b8a4ea7df7bab2853c5682765a9ae7a1",
+    "lines": 133,
+    "doc": "Generate top-10 ViT negative pair visualization for Datasets5 — single-column layout.",
+    "imports": [
+      "PIL",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": []
+  },
+  {
+    "path": "generate_datasets5_transforms.py",
+    "bytes": 9372,
+    "sha256": "d2dad4f07dc68f247b9d5bfba2ddff509f6e5038ead9dd1a794b41a8404db22b",
+    "lines": 251,
+    "doc": "Generate 32 image transforms for each of the 1000 images in Datasets5.\nOutput: Transform/datasets5/{category}_{image_stem}/ (32 files each)\n\n12 operations:\n  F1, F2         — 1 output each (flips)\n  C, S1, S2, R, B, V, T, Sh, K, N — 3 levels each (low/mid/high)\n  Total: 2 + 10×3 = 32 transforms per image",
+    "imports": [
+      "concurrent.futures",
+      "cv2",
+      "numpy",
+      "pathlib",
+      "time"
+    ],
+    "definitions": [
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "op_F1",
+      "op_F2",
+      "process_single_image",
+      "gather_images",
+      "main"
+    ]
+  },
+  {
+    "path": "generate_missing_transforms.py",
+    "bytes": 1427,
+    "sha256": "1e3229ef3d13f02022a3bb6a42032884b994cbacb152f1272e503678535d1d5d",
+    "lines": 37,
+    "doc": "Generate transforms for only the missing images in Transform/datasets5.",
+    "imports": [
+      "cv2",
+      "generate_datasets5_transforms",
+      "numpy",
+      "pathlib",
+      "sys",
+      "time"
+    ],
+    "definitions": []
+  },
+  {
+    "path": "opendata/scripts/extract_opendata.py",
+    "bytes": 14232,
+    "sha256": "b48eac5e0e175b76cd089b63b78ea52bb93effebe72940795f7cbe4b035c8344",
+    "lines": 350,
+    "doc": "Open Data CSV extraction — SQL Server direct.\nReplaces the PostgreSQL-based refresh_github_extract.bash pipeline.\nQueries x_ tables from TMSPublicExtract and outputs CSVs matching\nthe exact production headers (lowercase column names, same column order).\n\nHandles formatting differences between SQL Server and PostgreSQL:\n- Booleans (bit): True/False → 1/0\n- Timestamps: adds US Eastern timezone offset (-04/-05)\n- Empty strings: quoted as \"\" to distinguish from NULL\n- Microseconds: trimmed trailing zeros (.937000 → .937)\n\nUsage:\n  extract_opendata.py --server HOST --database DB [--git-push] [--output-dir DIR]\n\nRequires --server and --database (or env vars OPENDATA_SERVER, OPENDATA_DATABASE).",
+    "imports": [
+      "argparse",
+      "datetime",
+      "dateutil",
+      "os",
+      "pyodbc",
+      "subprocess",
+      "sys"
+    ],
+    "definitions": [
+      "connect",
+      "format_datetime",
+      "format_value",
+      "needs_quoting",
+      "write_csv_row",
+      "extract_table",
+      "git_push",
+      "parse_args",
+      "main"
+    ]
+  },
+  {
+    "path": "opendata/tests/conftest.py",
+    "bytes": 2577,
+    "sha256": "e05965ecca1b50df6ff2600dd648bd3f9f85d98f4756aa13d764c5fe38f9b1ac",
+    "lines": 79,
+    "doc": "Shared fixtures for the test suite.",
+    "imports": [
+      "extract_opendata",
+      "os",
+      "pytest",
+      "subprocess",
+      "sys",
+      "tempfile"
+    ],
+    "definitions": [
+      "_read_conf",
+      "_kinit_service_account",
+      "pytest_addoption",
+      "db"
+    ]
+  },
+  {
+    "path": "opendata/tests/test_csv_formatting.py",
+    "bytes": 4841,
+    "sha256": "266c786db3c031d5e9e31bdc2a9e32248e695a228edaea7daf7a2e7435b75db7",
+    "lines": 164,
+    "doc": "Unit tests for CSV formatting functions in extract_opendata.py.",
+    "imports": [
+      "datetime",
+      "extract_opendata",
+      "io",
+      "os",
+      "pytest",
+      "sys"
+    ],
+    "definitions": [
+      "TestFormatDatetime",
+      "TestFormatValue",
+      "TestNeedsQuoting",
+      "TestWriteCsvRow",
+      "TestTablesDefinition"
+    ]
+  },
+  {
+    "path": "opendata/tests/test_database.py",
+    "bytes": 5915,
+    "sha256": "8cd04b322df4228e30219e996f0f42a40451334fd5864f622b428ba3d73846a8",
+    "lines": 163,
+    "doc": "Integration tests requiring a SQL Server connection.\n\nRuns read-only queries against TMSPublicExtract to verify extraction\nqueries execute correctly. Skips automatically if DB is unreachable.\n\nConnection uses Kerberos via service account credentials from\n/usr/local/nga/etc/tmspublicextract.conf (see conftest.py).\n\nUsage:\n  pytest tests/test_database.py -v\n  pytest tests/test_database.py -v --server ap-tmstst-db --database TMSPublicExtract",
+    "imports": [
+      "extract_opendata",
+      "os",
+      "pytest",
+      "re",
+      "sys"
+    ],
+    "definitions": [
+      "TestConnection",
+      "TestQueryExecution",
+      "TestOpenAccess",
+      "TestRowCounts",
+      "TestNoInternalColumns"
+    ]
+  },
+  {
+    "path": "pixiv/download_pixiv_first_1000.py",
+    "bytes": 11058,
+    "sha256": "d9e9a7a8acb77b995ad909297fb977d9ef93532d6a86962a35833108d277f990",
+    "lines": 334,
+    "doc": "Download a prefix of images from a large remote ZIP using HTTP ranges.",
+    "imports": [
+      "argparse",
+      "binascii",
+      "bz2",
+      "concurrent.futures",
+      "csv",
+      "io",
+      "os",
+      "pathlib",
+      "re",
+      "struct",
+      "subprocess",
+      "sys",
+      "tempfile",
+      "time",
+      "zipfile"
+    ],
+    "definitions": [
+      "run_curl",
+      "remote_file_size",
+      "fetch_range",
+      "CurlRangeReader",
+      "decompress_member",
+      "safe_basename",
+      "download_one",
+      "build_archive_index",
+      "write_manifest",
+      "parse_args",
+      "main"
+    ]
+  },
+  {
+    "path": "run_datasets5_threshold.py",
+    "bytes": 20390,
+    "sha256": "a22dadc8f2eecfe3089f13e394e7f513fb00c270c9a8af4fbd54dd0c214491b0",
+    "lines": 397,
+    "doc": "CLIP + ViT two-stage threshold evaluation on Datasets5 (ArtBench-10).\n1000 images × 32 transforms = 31,000 positive + 499,500 negative pairs.",
+    "imports": [
+      "PIL",
+      "__future__",
+      "json",
+      "numpy",
+      "openpyxl",
+      "openpyxl.chart",
+      "openpyxl.styles",
+      "os",
+      "pandas",
+      "pathlib",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "gather_originals",
+      "load_models",
+      "compute_clip_embeddings",
+      "compute_vit_embeddings",
+      "build_similarities",
+      "evaluate_grid",
+      "generate_excel",
+      "main"
+    ]
+  },
+  {
+    "path": "run_threshold_eval_1000.py",
+    "bytes": 33186,
+    "sha256": "955adab880a96ab6aa6cd7ab13de6cfb0aa17d58c162c423bd2e0b9d407f21e1",
+    "lines": 700,
+    "doc": "Threshold Evaluation: CLIP + ViT two-stage pipeline on 1000 images (Datasets2_1).\nOutput format matches threshold_eval_clip08_vit05_archieve.\n\n- 1000 originals (100/class × 10 classes) from Datasets2_1\n- 31 transforms per original → 31,000 positive pairs (CLIP)\n- C(1000,2) = 499,500 negative pairs (ViT)\n- Grid: CLIP [0.80..0.85] × ViT [0.30..0.50] = 126 combinations",
+    "imports": [
+      "PIL",
+      "__future__",
+      "cv2",
+      "datetime",
+      "json",
+      "numpy",
+      "openpyxl",
+      "openpyxl.chart",
+      "openpyxl.styles",
+      "openpyxl.utils",
+      "os",
+      "pandas",
+      "pathlib",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "op_F1",
+      "op_F2",
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "gather_originals",
+      "generate_transforms",
+      "build_pairs",
+      "load_models",
+      "compute_clip_sim",
+      "compute_vit_sim",
+      "evaluate_grid",
+      "generate_excel",
+      "main"
+    ]
+  },
+  {
+    "path": "run_threshold_eval_1000_v2.py",
+    "bytes": 26738,
+    "sha256": "653288960d8ef3f512a8415f446829ab38c8fddbad354c8ccfa822a8b5a5dcf9",
+    "lines": 496,
+    "doc": "Optimized Threshold Evaluation — pre-compute embeddings, then matrix-multiply.\nDatasets2_1: 1000 images → 31,000 pos + 499,500 neg pairs → 126 grid combos.",
+    "imports": [
+      "PIL",
+      "__future__",
+      "cv2",
+      "json",
+      "numpy",
+      "openpyxl",
+      "openpyxl.chart",
+      "openpyxl.styles",
+      "os",
+      "pandas",
+      "pathlib",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "op_F1",
+      "op_F2",
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "gather_originals",
+      "generate_transforms",
+      "load_models",
+      "compute_clip_embeddings",
+      "compute_vit_embeddings",
+      "build_similarities",
+      "evaluate_grid",
+      "generate_excel",
+      "main"
+    ]
+  },
+  {
+    "path": "src/core/auto_perception_ex1.py",
+    "bytes": 11157,
+    "sha256": "7ad606f8392365b958868c755433857aaa0b47a72652b45d3dabfbab6ab7c970",
+    "lines": 277,
+    "doc": "",
+    "imports": [
+      "PIL",
+      "glob",
+      "io",
+      "os",
+      "perception",
+      "torch",
+      "transformers",
+      "xlsxwriter"
+    ],
+    "definitions": [
+      "get_image_files",
+      "get_hashers",
+      "precompute_hashes",
+      "compute_distances",
+      "get_vit_embedding",
+      "get_clip_embedding",
+      "prepare_thumbnail",
+      "compare_folders"
+    ]
+  },
+  {
+    "path": "src/core/auto_perception_ex2.py",
+    "bytes": 12826,
+    "sha256": "9bab01f36164b5d3db2c02a6cd7b3e1235307f0411397bfdd66ff7ee85f3726c",
+    "lines": 322,
+    "doc": "",
+    "imports": [
+      "PIL",
+      "glob",
+      "io",
+      "os",
+      "pathlib",
+      "perception",
+      "sklearn.metrics.pairwise",
+      "torch",
+      "transformers",
+      "xlsxwriter"
+    ],
+    "definitions": [
+      "get_image_files",
+      "get_hashers",
+      "precompute_hashes",
+      "compute_distances",
+      "get_vit_embedding",
+      "get_clip_embedding",
+      "prepare_thumbnail",
+      "write_report_for_reference",
+      "compare_folders"
+    ]
+  },
+  {
+    "path": "src/core/clip_all_fallback_comparison.py",
+    "bytes": 14005,
+    "sha256": "2991a2be661d0a7bfa165f7092f742c48829789b24b513484ffa22e0d79388b7",
+    "lines": 459,
+    "doc": "Compare CLIP baseline and CLIP+6 fallback strategies in one table and one chart.\n\nStrategies:\n- CLIP only\n- CLIP + ViT\n- CLIP + pHash\n- CLIP + aHash\n- CLIP + dHash\n- CLIP + wHash\n- CLIP + PDQ\n\nRule:\n1. If CLIP similarity >= 0.90, count as correct.\n2. If CLIP similarity < 0.90, try one fallback metric.\n3. If fallback similarity > 0.90, count as a rescued correct case.\n\nThis script reads the existing Excel reports in ``ex1_2/table`` directly and\ndoes not rerun any image models. By default it excludes:\n- ``F2_Vertical_flip`` rows\n- ``test_report.xlsx``",
+    "imports": [
+      "__future__",
+      "argparse",
+      "dataclasses",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "pathlib",
+      "re",
+      "xlsxwriter",
+      "xml.etree",
+      "zipfile"
+    ],
+    "definitions": [
+      "ReportRow",
+      "parse_args",
+      "load_shared_strings",
+      "get_cell_value",
+      "read_sheet_rows",
+      "iter_report_rows",
+      "analyze_methods",
+      "save_excel",
+      "plot_line_comparison",
+      "main"
+    ]
+  },
+  {
+    "path": "src/core/generate_ex1.py",
+    "bytes": 6711,
+    "sha256": "8b941c54f26fb708a42937eb1d8661869df2e91bcc42426926ca49868d281e1b",
+    "lines": 185,
+    "doc": "12 base image operations — generate all combinations of 1, 2, 3, and 4 operations\nTotal: C(12,1) + C(12,2) + C(12,3) + C(12,4) = 12 + 66 + 220 + 495 = 793 output images.",
+    "imports": [
+      "cv2",
+      "itertools",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "op_F1",
+      "op_F2",
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "apply_operations",
+      "main"
+    ]
+  },
+  {
+    "path": "src/core/generate_ex2.py",
+    "bytes": 9613,
+    "sha256": "f6fa3fedb2e40c4da5cb3fa876ec44d4812f0a4268b5896528208eda932693d0",
+    "lines": 250,
+    "doc": "Generate image variations using 12 base operations.\nFor each tunable operation, produce 3 subtle settings (low / mid / high)\nthat are specific to that operation.\nFilenames include the level and the actual parameter values.\n\nNow loops over all images in the 'Images' folder.\nEach image gets its own output subfolder (named after the image stem).",
+    "imports": [
+      "cv2",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": [
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "op_F1",
+      "op_F2",
+      "get_image_files",
+      "main"
+    ]
+  },
+  {
+    "path": "src/core/similarity.py",
+    "bytes": 19062,
+    "sha256": "9606439163fb6ea822043af7302dbebfc901a9fa6992277e837d2173b903400e",
+    "lines": 469,
+    "doc": "CLIP, ViT & Perceptual Hash Image Similarity Comparison\n========================================================\nCompares all 100 images from the Archive directory using 7 algorithms\n\n  Deep embeddings:\n    1. CLIP  (ViT-B/32)  — 512-dim joint vision-language\n    2. ViT   (ViT-B/16)  — 768-dim [CLS] token\n\n  Perceptual hashes:\n    3. aHash — Average Hash          (64-bit)\n    4. pHash — Perceptual / DCT Hash (64-bit)\n    5. dHash — Difference Hash       (64-bit)\n    6. wHash — Wavelet Hash          (64-bit)\n    7. PDQ   — Facebook PDQ Hash     (256-bit)\n\nFor hashes: similarity = 1 − Hamming_distance / max_bits",
+    "imports": [
+      "PIL",
+      "imagehash",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "pdqhash",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers",
+      "warnings"
+    ],
+    "definitions": [
+      "gather_images",
+      "load_pil_images",
+      "load_clip_model",
+      "load_vit_model",
+      "extract_clip_embeddings",
+      "extract_vit_embeddings",
+      "compute_hash_similarity_matrix",
+      "compute_hashes_ahash",
+      "compute_hashes_phash",
+      "compute_hashes_dhash",
+      "compute_hashes_whash",
+      "compute_hashes_pdq",
+      "compute_cosine_similarity_matrix",
+      "save_results",
+      "run_pipeline",
+      "main"
+    ]
+  },
+  {
+    "path": "src/core/threshold.py",
+    "bytes": 13315,
+    "sha256": "b5c4e8b55236bbbfda6347f3daa7dbcfa791f835f764305b4fca792dc4830ebe",
+    "lines": 309,
+    "doc": "Threshold Evaluation @ 0.9 — CLIP & ViT\n=======================================\nPositive pairs: each original image vs its 31 non-F2 variations → 3100 pairs (label=1)\nNegative pairs: all pairs of different original images → 4950 pairs (label=0)\n\nMetrics: TP, TN, FP, FN, Recall, Precision, Accuracy, F1",
+    "imports": [
+      "PIL",
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers",
+      "warnings"
+    ],
+    "definitions": [
+      "build_evaluation_pairs",
+      "load_models",
+      "compute_clip_similarity",
+      "compute_vit_similarity",
+      "evaluate",
+      "main"
+    ]
+  },
+  {
+    "path": "src/core/vit_all_fallback_4thresholds.py",
+    "bytes": 10813,
+    "sha256": "82f3c7d392e8b5bfe152182f16357a49d756a7d3d29ac6fa621041c00cb46399",
+    "lines": 332,
+    "doc": "Use ViT as the baseline and compare six fallback strategies across four thresholds.\n\nStrategies:\n- ViT only\n- ViT + CLIP\n- ViT + pHash\n- ViT + aHash\n- ViT + dHash\n- ViT + wHash\n- ViT + PDQ\n\nFor each threshold in {0.90, 0.89, 0.88, 0.87}:\n1. If ViT similarity >= threshold, count as correct.\n2. If ViT similarity < threshold, try one fallback metric.\n3. If fallback similarity > threshold, count as a rescued correct case.\n\nOutputs:\n- One Excel file per threshold\n- One combined four-threshold line chart",
+    "imports": [
+      "__future__",
+      "dataclasses",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "pathlib",
+      "re",
+      "xlsxwriter",
+      "xml.etree",
+      "zipfile"
+    ],
+    "definitions": [
+      "ReportRow",
+      "load_shared_strings",
+      "get_cell_value",
+      "read_sheet_rows",
+      "iter_report_rows",
+      "analyze_threshold",
+      "save_excel",
+      "plot_combined_line",
+      "main"
+    ]
+  },
+  {
+    "path": "src/pipelines/benchmark_pipeline.py",
+    "bytes": 4316,
+    "sha256": "4a92246cc6207fb7239ea99f824f4fb8675c5a8a7ec39296fe260a7a191e2d2f",
+    "lines": 137,
+    "doc": "Run the ex1_2 pipeline for multiple batch sizes with precise per-step timing.\n\nUsage:\n    python benchmark_pipeline.py",
+    "imports": [
+      "__future__",
+      "auto_perception_ex2",
+      "datetime",
+      "generate_ex2",
+      "json",
+      "pathlib",
+      "plot_ex2",
+      "plot_summary",
+      "sys",
+      "time"
+    ],
+    "definitions": [
+      "td",
+      "run_one",
+      "main"
+    ]
+  },
+  {
+    "path": "src/pipelines/resume_ex3.py",
+    "bytes": 9861,
+    "sha256": "707ef5004e22590e83cbea4dbcb06ccefee26e859f9bd1df5221e901d1d344d5",
+    "lines": 244,
+    "doc": "Resume Ex3 from ViT after CLIP completed. Skips Phase 1 and CLIP.",
+    "imports": [
+      "PIL",
+      "__future__",
+      "datetime",
+      "imagehash",
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "pdqhash",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "load_pil",
+      "gather_state",
+      "extract_embeddings",
+      "bits_ahash",
+      "bits_phash",
+      "bits_dhash",
+      "bits_whash",
+      "bits_pdq",
+      "run_algo",
+      "main"
+    ]
+  },
+  {
+    "path": "src/pipelines/run_7algo_similarity.py",
+    "bytes": 17667,
+    "sha256": "50f9363015a045cc6098b8f9dd534ec1141fe37582a39087d827fd09f976654d",
+    "lines": 382,
+    "doc": "Run all 7 similarity algorithms (CLIP, ViT, 5 hashes) on each original→transform pair.\nCreates per-algorithm similarity tables + combined summary chart.\n\nDatasets handled:\n  - Datasets2_2 only (100 images: 10/class)\n  - Datasets2_2 + Archive (200 images combined)",
+    "imports": [
+      "PIL",
+      "__future__",
+      "cv2",
+      "imagehash",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "pdqhash",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "op_F1",
+      "op_F2",
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "gather_dataset",
+      "gen_transforms",
+      "load_models",
+      "extract_all_embeddings",
+      "h_ahash",
+      "h_phash",
+      "h_dhash",
+      "h_whash",
+      "h_pdq",
+      "run_experiment",
+      "main",
+      "generate_charts"
+    ]
+  },
+  {
+    "path": "src/pipelines/run_combined_200.py",
+    "bytes": 22378,
+    "sha256": "497066f375f00ce4aa84fcc05675acc79e0fe0df35ebd9d7111095f70eb85755",
+    "lines": 402,
+    "doc": "Combined 200-image threshold sweep: Archive(100) + Datasets2_1(100).",
+    "imports": [
+      "PIL",
+      "__future__",
+      "cv2",
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "sys",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "op_F1",
+      "op_F2",
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "gather_originals",
+      "generate_transforms",
+      "build_pairs",
+      "load_models",
+      "compute_clip",
+      "compute_vit",
+      "evaluate",
+      "main"
+    ]
+  },
+  {
+    "path": "src/pipelines/run_ex3.py",
+    "bytes": 19873,
+    "sha256": "d8f22ba8fc104339090738f5509fd97d81e6c22253eb3aa3d4a273371c0fbd59",
+    "lines": 514,
+    "doc": "Ex3 Pipeline: 12 transformations × 1000 images × 7 similarity algorithms.\n\nPhase 1: Generate 32 variants per image → 32,000 images\nPhase 2: Compute similarity (original vs each variant) using 7 algorithms\nPhase 3: Save tables to experiments/ex3/tables/\nPhase 4: Record timing to experiments/time/ex3_timing.json",
+    "imports": [
+      "PIL",
+      "__future__",
+      "cv2",
+      "datetime",
+      "imagehash",
+      "json",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "pdqhash",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "op_F1",
+      "op_F2",
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "gather_originals",
+      "generate_variants",
+      "load_pil",
+      "compute_similarity_table",
+      "_extract_embeddings",
+      "_ahash_bits",
+      "_phash_bits",
+      "_dhash_bits",
+      "_whash_bits",
+      "_pdq_bits",
+      "main"
+    ]
+  },
+  {
+    "path": "src/pipelines/run_pipeline.py",
+    "bytes": 3291,
+    "sha256": "58351795466258437faa2de944a89d0b98ccf0a8084db91dd400b1241441b029",
+    "lines": 102,
+    "doc": "Run the full ex1_2 pipeline end to end.\n\nSteps:\n1. Generate image outputs from source images using ex1_2/generate_ex2.py.\n2. Compare generated outputs with reference images using ex1_2/auto_perception_ex2.py.\n3. Plot charts from generated reports using ex1_2/plot_ex2.py.\n4. Generate summary charts from the same reports using ex1_2/plot_summary.py.\n\nUsage:\n    python run_pipeline.py --image-dir ../Images/ex2_ai_art",
+    "imports": [
+      "__future__",
+      "argparse",
+      "auto_perception_ex2",
+      "generate_ex2",
+      "pathlib",
+      "plot_ex2",
+      "plot_summary",
+      "sys"
+    ],
+    "definitions": [
+      "run_pipeline",
+      "parse_args"
+    ]
+  },
+  {
+    "path": "src/pipelines/run_threshold_sweep.py",
+    "bytes": 21534,
+    "sha256": "c1e5008e6246b2c7773e3db8dded002d3b45d402f29fe997dcb78ccfa03d7150",
+    "lines": 493,
+    "doc": "Threshold Sweep: CLIP (positive) + ViT (negative) with 5×5 threshold grid.\n\n- 100 originals from Datasets2_1 (10/class)\n- 32 transforms per original, 31 non-F2 variants used for positive pairs\n- 3100 positive pairs (CLIP) + 4950 negative pairs (ViT)\n- 25 threshold combinations evaluated",
+    "imports": [
+      "PIL",
+      "__future__",
+      "cv2",
+      "datetime",
+      "json",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "time",
+      "torch",
+      "tqdm",
+      "transformers"
+    ],
+    "definitions": [
+      "op_F1",
+      "op_F2",
+      "op_C",
+      "op_S1",
+      "op_S2",
+      "op_R",
+      "op_B",
+      "op_V",
+      "op_T",
+      "op_Sh",
+      "op_K",
+      "op_N",
+      "gather_originals",
+      "generate_transforms",
+      "build_pairs",
+      "load_models",
+      "compute_clip_sim",
+      "compute_vit_sim",
+      "evaluate_grid",
+      "make_plots",
+      "main"
+    ]
+  },
+  {
+    "path": "src/plotting/plot_abs_negative_pairs.py",
+    "bytes": 2653,
+    "sha256": "16c7cbcffbeede7200a5fdb0c2875bd7d4e704729935c58c798aedd0d0becde9",
+    "lines": 57,
+    "doc": "重新绘制 vit_negative_pairs_line.jpg：对 ViT 负样本余弦相似度取绝对值后排序绘图。",
+    "imports": [
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "pathlib"
+    ],
+    "definitions": []
+  },
+  {
+    "path": "src/plotting/plot_ex1.py",
+    "bytes": 11631,
+    "sha256": "7232af2fb4c1db48449b69d3b79b1b410a21445f47eed0f5acc7975c478f3c0a",
+    "lines": 266,
+    "doc": "Plot charts from test_report.xlsx — ViT/CLIP + hash similarities for 793 combinations.",
+    "imports": [
+      "collections",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "openpyxl",
+      "pathlib"
+    ],
+    "definitions": []
+  },
+  {
+    "path": "src/plotting/plot_ex2.py",
+    "bytes": 26242,
+    "sha256": "74cebcf3b68f52439164be7c3ee60a31eb15ae5278845842a6783178bcb75db3",
+    "lines": 629,
+    "doc": "Plot charts from all *_report.xlsx files in the table directory.",
+    "imports": [
+      "collections",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "openpyxl",
+      "pathlib"
+    ],
+    "definitions": [
+      "to_f",
+      "parse_report_data",
+      "plot_bars",
+      "plot_lines",
+      "hash_bar_plot",
+      "hash_line_plot",
+      "save_plots_for_report",
+      "save_summary_chart",
+      "save_low_level_transform_summary",
+      "main"
+    ]
+  },
+  {
+    "path": "src/plotting/plot_summary.py",
+    "bytes": 13848,
+    "sha256": "e3ab41e65d9542309f3c73d5040872fb74290ee8e0530efdd8dab06c16a2b500",
+    "lines": 375,
+    "doc": "Generate summary charts from ex1_2 report Excel files.\n\nThis script reads all *_report.xlsx files under the report directory and\nproduces the same summary charts that live in ex1_2/plot/summary_ai_art.",
+    "imports": [
+      "__future__",
+      "argparse",
+      "collections",
+      "matplotlib",
+      "matplotlib.pyplot",
+      "numpy",
+      "openpyxl",
+      "pathlib"
+    ],
+    "definitions": [
+      "to_float",
+      "parse_report_data",
+      "load_all_reports",
+      "save_vit_summary",
+      "save_clip_summary",
+      "save_hash_summary",
+      "save_each_hash_summary",
+      "build_level_buckets",
+      "save_transformer_level_summary",
+      "save_hash_level_summary",
+      "save_combined_transformer_hash_summary",
+      "save_low_level_transform_summary",
+      "build_summary_charts",
+      "parse_args"
+    ]
+  },
+  {
+    "path": "src/utils/__init__.py",
+    "bytes": 204,
+    "sha256": "bccec2151e952cc4e0cc479adf0a7cdeb5c2171aba805b122e25cc571b63ed6a",
+    "lines": 6,
+    "doc": "工具模块",
+    "imports": [
+      "file_manager"
+    ],
+    "definitions": []
+  },
+  {
+    "path": "src/utils/file_manager.py",
+    "bytes": 4137,
+    "sha256": "ab333693956f187002108dcf68a37ef84965bff03c2eaf6d0cf63fe09280a95e",
+    "lines": 159,
+    "doc": "文件管理工具模块\n自动管理文件保存位置和命名规范",
+    "imports": [
+      "datetime",
+      "json",
+      "pathlib"
+    ],
+    "definitions": [
+      "ProjectPaths",
+      "get_filename",
+      "save_dataframe",
+      "save_figure",
+      "save_json"
+    ]
+  }
+]

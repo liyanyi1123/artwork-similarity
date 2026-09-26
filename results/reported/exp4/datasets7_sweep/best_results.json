@@ -1,0 +1,106 @@
+{
+  "dataset": "Datasets7 (pixiv1000 anime/illustration images)",
+  "n_originals": 1000,
+  "positive_pairs": 31000,
+  "negative_pairs": 499500,
+  "combinations": 10201,
+  "best_f1": {
+    "vit_threshold": 0.76,
+    "clip_threshold": 0.96,
+    "rule": "CLIP>0.96 AND ViT>0.76",
+    "f1": 0.947858,
+    "accuracy": 0.994066,
+    "precision": 0.974093,
+    "recall": 0.923,
+    "TP": 28613,
+    "FP": 761,
+    "TN": 498739,
+    "FN": 2387
+  },
+  "best_accuracy": {
+    "vit_threshold": 0.77,
+    "clip_threshold": 0.96,
+    "rule": "CLIP>0.96 AND ViT>0.77",
+    "f1": 0.94773,
+    "accuracy": 0.994085,
+    "precision": 0.979817,
+    "recall": 0.917677,
+    "TP": 28448,
+    "FP": 586,
+    "TN": 498914,
+    "FN": 2552
+  },
+  "top10_f1": [
+    {
+      "vit_threshold": 0.76,
+      "clip_threshold": 0.96,
+      "rule": "CLIP>0.96 AND ViT>0.76",
+      "f1": 0.947858,
+      "accuracy": 0.994066
+    },
+    {
+      "vit_threshold": 0.78,
+      "clip_threshold": 0.95,
+      "rule": "CLIP>0.95 AND ViT>0.78",
+      "f1": 0.947772,
+      "accuracy": 0.994068
+    },
+    {
+      "vit_threshold": 0.75,
+      "clip_threshold": 0.96,
+      "rule": "CLIP>0.96 AND ViT>0.75",
+      "f1": 0.947755,
+      "accuracy": 0.994021
+    },
+    {
+      "vit_threshold": 0.77,
+      "clip_threshold": 0.96,
+      "rule": "CLIP>0.96 AND ViT>0.77",
+      "f1": 0.94773,
+      "accuracy": 0.994085
+    },
+    {
+      "vit_threshold": 0.77,
+      "clip_threshold": 0.95,
+      "rule": "CLIP>0.95 AND ViT>0.77",
+      "f1": 0.947709,
+      "accuracy": 0.994023
+    },
+    {
+      "vit_threshold": 0.78,
+      "clip_threshold": 0.94,
+      "rule": "CLIP>0.94 AND ViT>0.78",
+      "f1": 0.947273,
+      "accuracy": 0.993987
+    },
+    {
+      "vit_threshold": 0.79,
+      "clip_threshold": 0.94,
+      "rule": "CLIP>0.94 AND ViT>0.79",
+      "f1": 0.946927,
+      "accuracy": 0.993994
+    },
+    {
+      "vit_threshold": 0.74,
+      "clip_threshold": 0.96,
+      "rule": "CLIP>0.96 AND ViT>0.74",
+      "f1": 0.946927,
+      "accuracy": 0.993894
+    },
+    {
+      "vit_threshold": 0.79,
+      "clip_threshold": 0.93,
+      "rule": "CLIP>0.93 AND ViT>0.79",
+      "f1": 0.946772,
+      "accuracy": 0.993966
+    },
+    {
+      "vit_threshold": 0.79,
+      "clip_threshold": 0.95,
+      "rule": "CLIP>0.95 AND ViT>0.79",
+      "f1": 0.946703,
+      "accuracy": 0.993989
+    }
+  ],
+  "runtime_seconds": 10.5
+}

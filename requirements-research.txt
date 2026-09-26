@@ -1,0 +1,19 @@
+# Optional dependencies for the preserved historical scripts.
+-r requirements-inference.txt
+torchvision>=0.21,<1
+matplotlib>=3.8,<4
+pandas>=2.2,<4
+openpyxl>=3.1,<4
+xlsxwriter>=3.2,<4
+ImageHash>=4.3,<5
+pdqhash>=0.2,<1
+perception>=0.7,<1
+scikit-learn>=1.4,<2
+python-pptx>=1,<2
+boto3>=1.34,<2
+requests>=2.31,<3
+datasets>=2.19,<6
+flask>=3,<4
+# research/app.py and research/final/compare.py also require OpenAI CLIP.
+# Install from https://github.com/openai/CLIP using its upstream instructions.
+# Historical .mjs presentation builders require @oai/artifact-tool separately.

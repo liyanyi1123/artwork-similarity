@@ -1,0 +1,52 @@
+{
+  "rule": "CLIP > 0.87 AND ViT > 0.50",
+  "clip_threshold": 0.87,
+  "vit_threshold": 0.5,
+  "counts_are_image_pairs": true,
+  "datasets": {
+    "Datasets5": {
+      "FP": 121,
+      "FN": 221
+    },
+    "Datasets6": {
+      "FP": 225,
+      "FN": 230
+    }
+  },
+  "total_pairs": {
+    "FP": 346,
+    "FN": 451
+  },
+  "total_image_files": {
+    "FP": 692,
+    "FN": 902
+  },
+  "source_unique_files": 990,
+  "copied_bytes": 989684508,
+  "copy_method": "Byte-preserving copies, symlinks followed, every output SHA-256 verified",
+  "FP_contents": "Two different original images per pair",
+  "FN_contents": "Original image and the evaluated transformed image per pair",
+  "source_paths_relative_to": "original workspace root",
+  "saved_paths_relative_to": "analysis/Papersep11/FNnFP",
+  "cached_pair_index": "Zero-based index into the positive or negative similarity arrays",
+  "similarity_sources": {
+    "Datasets5": {
+      "cache": "analysis/threshold_eval_datasets5/embeddings",
+      "positive_vit": "exp4/results/positive_vit_similarities.npy",
+      "sweep": "exp4/threshold_eval/full_sweep/threshold_sweep_summary.csv",
+      "expected": {
+        "FP": 121,
+        "FN": 221
+      }
+    },
+    "Datasets6": {
+      "cache": "exp4/datasets6_sweep/embeddings",
+      "positive_vit": "exp4/datasets6_sweep/embeddings/vit_pos_sims.npy",
+      "sweep": "exp4/datasets6_sweep/threshold_sweep_summary.csv",
+      "expected": {
+        "FP": 225,
+        "FN": 230
+      }
+    }
+  }
+}

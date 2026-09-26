@@ -1,0 +1,14 @@
+{
+  "python": "3.11.15",
+  "platform": "macOS",
+  "execution_device": "CPU",
+  "installed_packages_used_or_detected": {
+    "numpy": "2.4.6",
+    "torch": "2.12.0",
+    "transformers": "5.11.0",
+    "pillow": "12.2.0",
+    "opencv-python": "4.13.0.92",
+    "matplotlib": "3.9.2"
+  },
+  "fresh_dependency_installation": false
+}

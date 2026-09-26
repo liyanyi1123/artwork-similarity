@@ -1,0 +1,14 @@
+{
+  "clip_model": "openai/clip-vit-base-patch32",
+  "vit_model": "google/vit-base-patch16-224",
+  "clip_representation": "L2-normalized projected image features (512 dimensions)",
+  "vit_representation": "L2-normalized last-hidden-state CLS token (768 dimensions)",
+  "clip_threshold": 0.87,
+  "vit_threshold": 0.50,
+  "comparison": ">",
+  "rule": "and",
+  "score_mode": "signed",
+  "positive_definition": "original paired with 31 retained transformations; F2 excluded",
+  "negative_definition": "unordered pairs of distinct original images",
+  "note": "Reference metadata; pass CLI flags to change a run. Historical absolute-score analyses are documented separately."
+}

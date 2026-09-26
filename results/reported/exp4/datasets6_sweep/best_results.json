@@ -1,0 +1,105 @@
+{
+  "dataset": "Datasets6 (wikiart 1000 images)",
+  "positive_pairs": 31000,
+  "negative_pairs": 499500,
+  "combinations": 10201,
+  "best_f1": {
+    "vit_threshold": 0.48,
+    "clip_threshold": 0.88,
+    "rule": "CLIP>0.88 AND ViT>0.48",
+    "f1": 0.992859,
+    "accuracy": 0.999167,
+    "precision": 0.994594,
+    "recall": 0.991129,
+    "TP": 30725,
+    "FP": 167,
+    "TN": 499333,
+    "FN": 275
+  },
+  "best_accuracy": {
+    "vit_threshold": 0.48,
+    "clip_threshold": 0.88,
+    "rule": "CLIP>0.88 AND ViT>0.48",
+    "f1": 0.992859,
+    "accuracy": 0.999167,
+    "precision": 0.994594,
+    "recall": 0.991129,
+    "TP": 30725,
+    "FP": 167,
+    "TN": 499333,
+    "FN": 275
+  },
+  "top10_f1": [
+    {
+      "vit_threshold": 0.48,
+      "clip_threshold": 0.88,
+      "rule": "CLIP>0.88 AND ViT>0.48",
+      "f1": 0.992859,
+      "accuracy": 0.999167
+    },
+    {
+      "vit_threshold": 0.5,
+      "clip_threshold": 0.88,
+      "rule": "CLIP>0.88 AND ViT>0.50",
+      "f1": 0.992823,
+      "accuracy": 0.999163
+    },
+    {
+      "vit_threshold": 0.47,
+      "clip_threshold": 0.88,
+      "rule": "CLIP>0.88 AND ViT>0.47",
+      "f1": 0.992812,
+      "accuracy": 0.999161
+    },
+    {
+      "vit_threshold": 0.46,
+      "clip_threshold": 0.88,
+      "rule": "CLIP>0.88 AND ViT>0.46",
+      "f1": 0.992797,
+      "accuracy": 0.999159
+    },
+    {
+      "vit_threshold": 0.49,
+      "clip_threshold": 0.88,
+      "rule": "CLIP>0.88 AND ViT>0.49",
+      "f1": 0.992793,
+      "accuracy": 0.999159
+    },
+    {
+      "vit_threshold": 0.44,
+      "clip_threshold": 0.88,
+      "rule": "CLIP>0.88 AND ViT>0.44",
+      "f1": 0.992703,
+      "accuracy": 0.999148
+    },
+    {
+      "vit_threshold": 0.45,
+      "clip_threshold": 0.88,
+      "rule": "CLIP>0.88 AND ViT>0.45",
+      "f1": 0.992686,
+      "accuracy": 0.999146
+    },
+    {
+      "vit_threshold": 0.5,
+      "clip_threshold": 0.87,
+      "rule": "CLIP>0.87 AND ViT>0.50",
+      "f1": 0.992661,
+      "accuracy": 0.999142
+    },
+    {
+      "vit_threshold": 0.49,
+      "clip_threshold": 0.87,
+      "rule": "CLIP>0.87 AND ViT>0.49",
+      "f1": 0.992615,
+      "accuracy": 0.999137
+    },
+    {
+      "vit_threshold": 0.51,
+      "clip_threshold": 0.88,
+      "rule": "CLIP>0.88 AND ViT>0.51",
+      "f1": 0.992579,
+      "accuracy": 0.999135
+    }
+  ],
+  "runtime_seconds": 5.3
+}

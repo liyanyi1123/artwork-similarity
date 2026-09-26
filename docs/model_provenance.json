@@ -1,0 +1,62 @@
+{
+  "scope": "Existing local model files used for smoke testing; weights are excluded from the release",
+  "upstream_revision": "Not recorded in the original caches",
+  "models": [
+    {
+      "model_id_from_local_config": "openai/clip-vit-base-patch32",
+      "architectures": [
+        "CLIPModel"
+      ],
+      "files": [
+        {
+          "name": "config.json",
+          "bytes": 4186,
+          "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770"
+        },
+        {
+          "name": "preprocessor_config.json",
+          "bytes": 316,
+          "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd"
+        },
+        {
+          "name": "pytorch_model.bin",
+          "bytes": 605247071,
+          "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 2224041,
+          "sha256": "b556ac8c99757ffb677208af34bc8c6721572114111a6e0aaf5fa69ff0b8d842"
+        }
+      ]
+    },
+    {
+      "model_id_from_local_config": "google/vit-base-patch16-224",
+      "architectures": [
+        "ViTForImageClassification"
+      ],
+      "files": [
+        {
+          "name": "config.json",
+          "bytes": 69665,
+          "sha256": "abdf73cc4ce79495a83f32a8c9265daa7a1363f5a3efa4704c88a6e7f45ad19d"
+        },
+        {
+          "name": "model.safetensors",
+          "bytes": 346293852,
+          "sha256": "1cea07110a4a47edc51420b2dda6f3b8b58e7256e8f44b4ea6aa9696162ccb5d"
+        },
+        {
+          "name": "preprocessor_config.json",
+          "bytes": 160,
+          "sha256": "90d1ae427c27d2b9dcb01f6a62ba96aa67aac2de1697c59cd212055b5035c4a2"
+        },
+        {
+          "name": "pytorch_model.bin",
+          "bytes": 346351599,
+          "sha256": "5f17067668129d23b52524f90a805e7d9914c276d90a59a13ebe81a09e40ceca"
+        }
+      ]
+    }
+  ]
+}

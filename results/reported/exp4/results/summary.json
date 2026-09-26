@@ -1,0 +1,26 @@
+{
+  "dataset": "Datasets5 (ArtBench-10)",
+  "decision_rule": "CLIP cosine similarity > 0.8 AND ViT cosine similarity > 0.5",
+  "clip_threshold": 0.8,
+  "vit_threshold": 0.5,
+  "comparison_operator": "strictly greater than",
+  "device_for_missing_vit_positive_embeddings": "cpu",
+  "vit_batch_size": 128,
+  "metrics": {
+    "total_pairs": 530500,
+    "positive_pairs": 31000,
+    "negative_pairs": 499500,
+    "TP": 30914,
+    "FP": 1085,
+    "TN": 498415,
+    "FN": 86,
+    "accuracy": 0.9977926484448634,
+    "precision": 0.9660926903965749,
+    "recall": 0.9972258064516129,
+    "f1": 0.9814124033714821,
+    "specificity": 0.9978278278278279,
+    "false_positive_rate": 0.0021721721721721723,
+    "false_negative_rate": 0.002774193548387097
+  },
+  "elapsed_seconds": 2.58
+}

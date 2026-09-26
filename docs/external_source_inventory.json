@@ -1,0 +1,104 @@
+[
+  {
+    "source": "opendata/scripts/refresh_github_extract.bash",
+    "bytes": 2000,
+    "sha256": "08e0ce88638e73e356b72a4f61d045eee81cb32100943980c1773eee757a12eb",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/scripts/tables.sql",
+    "bytes": 4660,
+    "sha256": "62e8e77f8260b51ca24543f43a2f68117e1d8f63485c969b9896afb34c990225",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/alternative_identifiers.sql",
+    "bytes": 400,
+    "sha256": "6351d022e8769647fffd7869aef343277c6b75df21a90915832173aff59a48af",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/constituents.sql",
+    "bytes": 1302,
+    "sha256": "74c1ffe29de1bac1061a2a2fa02a01a7596def9be01950da3af7182ea7e57531",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/constituents_altnames.sql",
+    "bytes": 644,
+    "sha256": "9cdc22b1c69f49f8368aa078099e1a1d55624593a53e88948aa61ad0eb0f7121",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/constituents_text_entries.sql",
+    "bytes": 467,
+    "sha256": "e1e0a79d417b39e94434e7f2ec1651e5fbfc78ede457fba8d571c1067c2eaf7b",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/locations.sql",
+    "bytes": 581,
+    "sha256": "bab54c79d45beaa294cbfc5a6e15fe7f8642d22768568fccfeafcda6b0428b6e",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/object_associations.sql",
+    "bytes": 401,
+    "sha256": "f1a3dab09df8d3520ffdd81693afd6b0f450ad3283642a2154b82ca293484cb6",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/objects.sql",
+    "bytes": 2691,
+    "sha256": "3a4e73edea1161de03d112c23660df18134ba6b8fe17d14b50ac9f5779c2fdfc",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/objects_constituents.sql",
+    "bytes": 996,
+    "sha256": "6910048cc2c62083e497b3fd391521eb1f02cc15f22c4f33424eccb3822d021d",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/objects_dimensions.sql",
+    "bytes": 525,
+    "sha256": "9ff20c5786e03f49d18ebc30f3d5a207ce8db390046fffcc5c121710e5acd832",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/objects_historical_data.sql",
+    "bytes": 660,
+    "sha256": "2a141b796e543b294950ae7324507e3f1980c5ea850da94e43740513fad15644",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/objects_terms.sql",
+    "bytes": 636,
+    "sha256": "6907e3ef957095b497c88d1ab433860c1fb4ecbf4a853a1502289ccfdd91df17",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/objects_text_entries.sql",
+    "bytes": 429,
+    "sha256": "51964f28e19f3d21185e9633527d6a16979e3691bb0e7d1686f9551b967a10ca",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/preferred_locations.sql",
+    "bytes": 752,
+    "sha256": "df0f43704f59d98aeec7ed1bc0b7b167116617c51ec64c5e03f51f0aafbf6307",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/preferred_locations_tms_locations.sql",
+    "bytes": 376,
+    "sha256": "0160aa7bb79991c0343494c5ade1ea842e35a47c78f3d173a29a264959b5ded1",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/sql_tables/published_images.sql",
+    "bytes": 1094,
+    "sha256": "df6e5569367d5d4119a075134c54a93e4ced5475d317c869996a7a9e325fed39",
+    "status": "External NGA checkout, excluded; upstream source link in THIRD_PARTY_NOTICES.md"
+  }
+]

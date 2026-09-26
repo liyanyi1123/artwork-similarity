@@ -1,0 +1,975 @@
+[
+  {
+    "source": ".ppt_build_weighting/build_slide.mjs",
+    "destination": "research/.ppt_build_weighting/build_slide.mjs",
+    "source_sha256": "2c575344658a12c4d44454648ecb490d11277925f869ac29f840247b1d848b9c",
+    "packaged_sha256": "156569e19fa815cef9c581214aae3e4ae7544cf50f427d6142580bada22400f0",
+    "note": "Local output/input paths made relative; experiment logic unchanged"
+  },
+  {
+    "source": "Aug27/extract_clip_vit_vectors.py",
+    "destination": "research/Aug27/extract_clip_vit_vectors.py",
+    "source_sha256": "1af001cd72ddf615bfc4ba2a10d2960931ae56de99b327a36de64e6311b47e25",
+    "packaged_sha256": "1af001cd72ddf615bfc4ba2a10d2960931ae56de99b327a36de64e6311b47e25",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "Aug27/legacy_code/run_datasets6_sweep.py",
+    "destination": "research/Aug27/legacy_code/run_datasets6_sweep.py",
+    "source_sha256": "cd443d4c74a3baa5fe795a26ca54112f15ae15502754a277f982004f550d4d11",
+    "packaged_sha256": "cd443d4c74a3baa5fe795a26ca54112f15ae15502754a277f982004f550d4d11",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "Aug27/legacy_code/run_datasets7_sweep.py",
+    "destination": "research/Aug27/legacy_code/run_datasets7_sweep.py",
+    "source_sha256": "9fd7d6e6ce8cfbeac6805885b1f267b29ca5bb598b5ce7c707e8d30315840e22",
+    "packaged_sha256": "9fd7d6e6ce8cfbeac6805885b1f267b29ca5bb598b5ce7c707e8d30315840e22",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "Datasets5/download_100_per_style.py",
+    "destination": "research/Datasets5/download_100_per_style.py",
+    "source_sha256": "809a69d0275287c666f928c44848e181ec256ae372d256f06ad7107485daa62d",
+    "packaged_sha256": "809a69d0275287c666f928c44848e181ec256ae372d256f06ad7107485daa62d",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "Datasets5/fix_ukiyoe.py",
+    "destination": "research/Datasets5/fix_ukiyoe.py",
+    "source_sha256": "2e34506923a74bcc41dd57b9fda12a79359e7db4a547e5818983b0345b0482bb",
+    "packaged_sha256": "2e34506923a74bcc41dd57b9fda12a79359e7db4a547e5818983b0345b0482bb",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "Datasets6/download_wikiart_1000.py",
+    "destination": "research/Datasets6/download_wikiart_1000.py",
+    "source_sha256": "4ae06fd31daa0125ef6817fca54d3e3c9feae9c19be1a32b1c4e7f11e0762187",
+    "packaged_sha256": "9f2c799193496437e3b924ddd9f1e0b03c2e1f2e2caa77126e6156d4599928dd",
+    "note": "Local output/input paths made relative; experiment logic unchanged"
+  },
+  {
+    "source": "PaperFigures_Sep14/02_fig2_workflow/system_implementation_flowchart.py",
+    "destination": "research/PaperFigures_Sep14/02_fig2_workflow/system_implementation_flowchart.py",
+    "source_sha256": "6e4bc4ce5fe65b2eaa9c16fb2677f66176643452ce3138da019490c7e761136f",
+    "packaged_sha256": "6e4bc4ce5fe65b2eaa9c16fb2677f66176643452ce3138da019490c7e761136f",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "PaperFigures_Sep14/09_method_comparison/make_method_comparison.py",
+    "destination": "research/PaperFigures_Sep14/09_method_comparison/make_method_comparison.py",
+    "source_sha256": "acc45049306b0c770cec03c24e324071add5eb457368879ee11b8dcdc820afac",
+    "packaged_sha256": "8d14b652f0be53c7cb5a42ca469b325fce954cd533905f33de60c59ffbf598b5",
+    "note": "Local output/input paths made relative; experiment logic unchanged"
+  },
+  {
+    "source": "analysis/ComprehensiveAnalysisAug3/generate_threshold_excel.py",
+    "destination": "research/analysis/ComprehensiveAnalysisAug3/generate_threshold_excel.py",
+    "source_sha256": "4c1bf4b41d6f6f8e1750e28de93349c1b2ee488482102cd70c6d0dff6c7426c3",
+    "packaged_sha256": "4c1bf4b41d6f6f8e1750e28de93349c1b2ee488482102cd70c6d0dff6c7426c3",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/Papersep11/export_fn_fp.py",
+    "destination": "research/analysis/Papersep11/export_fn_fp.py",
+    "source_sha256": "3dffc586eea955f434f38cdd0714393a4f4250eaed8c2b929dc67c9b8a2365db",
+    "packaged_sha256": "3dffc586eea955f434f38cdd0714393a4f4250eaed8c2b929dc67c9b8a2365db",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_eval_datasets1/export_overall_summary_to_excel.py",
+    "destination": "research/analysis/threshold_eval_datasets1/export_overall_summary_to_excel.py",
+    "source_sha256": "c0bacba93c7f1212d490e78decefa2f49b6fab871b338fe203793933a785dcea",
+    "packaged_sha256": "c0bacba93c7f1212d490e78decefa2f49b6fab871b338fe203793933a785dcea",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_eval_datasets1/plot_vit_similarity_ai_art1_vs_others.py",
+    "destination": "research/analysis/threshold_eval_datasets1/plot_vit_similarity_ai_art1_vs_others.py",
+    "source_sha256": "657b3c9c52bd8e118927aacb4c6e7f557055248605cef640fe831438aa6d9d4f",
+    "packaged_sha256": "657b3c9c52bd8e118927aacb4c6e7f557055248605cef640fe831438aa6d9d4f",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_eval_datasets1/run_threshold_eval.py",
+    "destination": "research/analysis/threshold_eval_datasets1/run_threshold_eval.py",
+    "source_sha256": "4d1fdc04d75235066516b30c043e653083782a33d0dccac6d189b3754f9ed3a9",
+    "packaged_sha256": "4d1fdc04d75235066516b30c043e653083782a33d0dccac6d189b3754f9ed3a9",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_evaluation/src/clip_all_fallback_comparison.py",
+    "destination": "research/analysis/threshold_evaluation/src/clip_all_fallback_comparison.py",
+    "source_sha256": "12389630fd680775d6977eac6d7bc2ae9dce19a53d898a22757398e13971cd6d",
+    "packaged_sha256": "12389630fd680775d6977eac6d7bc2ae9dce19a53d898a22757398e13971cd6d",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_evaluation/src/threshold_evaluation.py",
+    "destination": "research/analysis/threshold_evaluation/src/threshold_evaluation.py",
+    "source_sha256": "e47f870a6663ffe6a75408a7d3e17bc3ec6131953828e1ccc376201900c2b70f",
+    "packaged_sha256": "e47f870a6663ffe6a75408a7d3e17bc3ec6131953828e1ccc376201900c2b70f",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_evaluation/src/vit_all_fallback_4thresholds.py",
+    "destination": "research/analysis/threshold_evaluation/src/vit_all_fallback_4thresholds.py",
+    "source_sha256": "174b0244f7d33032e5c63cf626e4305c7ba41b9f030e5111dd0a82faec9a4aad",
+    "packaged_sha256": "174b0244f7d33032e5c63cf626e4305c7ba41b9f030e5111dd0a82faec9a4aad",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "app.py",
+    "destination": "research/app.py",
+    "source_sha256": "b53092bd17feffed16c3cd7d98f096b8825107230c3664bdb5567286d826ccf8",
+    "packaged_sha256": "b53092bd17feffed16c3cd7d98f096b8825107230c3664bdb5567286d826ccf8",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "docs/ppt-output/runs/20260629-image-perception/generate_ppt.py",
+    "destination": "research/docs/ppt-output/runs/20260629-image-perception/generate_ppt.py",
+    "source_sha256": "ce62b03b90a9e5bdf0a3bf600ba7a3b58ab5424e1649df2b55f88299009f8781",
+    "packaged_sha256": "a6e0e162dc8347977cf3f5591f60a6d51e4fbe25ae835f335025113987055929",
+    "note": "Local output/input paths made relative; experiment logic unchanged"
+  },
+  {
+    "source": "download_openimages_100.py",
+    "destination": "research/download_openimages_100.py",
+    "source_sha256": "2266db6e1e1fe0744cb99ba5ba930aa974ec6e30c2f058844bd56ce95ab65b40",
+    "packaged_sha256": "2266db6e1e1fe0744cb99ba5ba930aa974ec6e30c2f058844bd56ce95ab65b40",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "download_pixiv_1000.py",
+    "destination": "research/download_pixiv_1000.py",
+    "source_sha256": "6615a5fad3726ef4abdbdffdf007d0c397c7452dc4fe5b84142fec09bffa97a7",
+    "packaged_sha256": "6615a5fad3726ef4abdbdffdf007d0c397c7452dc4fe5b84142fec09bffa97a7",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "download_pixiv_supplement.py",
+    "destination": "research/download_pixiv_supplement.py",
+    "source_sha256": "340f20429a11c68f7643a98e4ce44918f0c5052a252e2b469175c7265d4fcbe0",
+    "packaged_sha256": "340f20429a11c68f7643a98e4ce44918f0c5052a252e2b469175c7265d4fcbe0",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "downloader.py",
+    "destination": "research/downloader.py",
+    "source_sha256": "614947a4f8d8063292a5e5583c30b29e8b636de283949014b7a13ea5535cdb0b",
+    "packaged_sha256": "614947a4f8d8063292a5e5583c30b29e8b636de283949014b7a13ea5535cdb0b",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/Similarity_compare/clip_similarity.py",
+    "destination": "research/ex1_2/Similarity_compare/clip_similarity.py",
+    "source_sha256": "52618a64cb868b5c67d0e1bce5f9dfb81424a602ebde369e0211692e6dbcce54",
+    "packaged_sha256": "52618a64cb868b5c67d0e1bce5f9dfb81424a602ebde369e0211692e6dbcce54",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/Similarity_compare/threshold_evaluation.py",
+    "destination": "research/ex1_2/Similarity_compare/threshold_evaluation.py",
+    "source_sha256": "b5c4e8b55236bbbfda6347f3daa7dbcfa791f835f764305b4fca792dc4830ebe",
+    "packaged_sha256": "b5c4e8b55236bbbfda6347f3daa7dbcfa791f835f764305b4fca792dc4830ebe",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/auto_perception_ex1.py",
+    "destination": "research/ex1_2/auto_perception_ex1.py",
+    "source_sha256": "7ad606f8392365b958868c755433857aaa0b47a72652b45d3dabfbab6ab7c970",
+    "packaged_sha256": "7ad606f8392365b958868c755433857aaa0b47a72652b45d3dabfbab6ab7c970",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/auto_perception_ex2.py",
+    "destination": "research/ex1_2/auto_perception_ex2.py",
+    "source_sha256": "9bab01f36164b5d3db2c02a6cd7b3e1235307f0411397bfdd66ff7ee85f3726c",
+    "packaged_sha256": "9bab01f36164b5d3db2c02a6cd7b3e1235307f0411397bfdd66ff7ee85f3726c",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/benchmark_pipeline.py",
+    "destination": "research/ex1_2/benchmark_pipeline.py",
+    "source_sha256": "4a92246cc6207fb7239ea99f824f4fb8675c5a8a7ec39296fe260a7a191e2d2f",
+    "packaged_sha256": "4a92246cc6207fb7239ea99f824f4fb8675c5a8a7ec39296fe260a7a191e2d2f",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/generate_ex1.py",
+    "destination": "research/ex1_2/generate_ex1.py",
+    "source_sha256": "8b941c54f26fb708a42937eb1d8661869df2e91bcc42426926ca49868d281e1b",
+    "packaged_sha256": "8b941c54f26fb708a42937eb1d8661869df2e91bcc42426926ca49868d281e1b",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/generate_ex2.py",
+    "destination": "research/ex1_2/generate_ex2.py",
+    "source_sha256": "f6fa3fedb2e40c4da5cb3fa876ec44d4812f0a4268b5896528208eda932693d0",
+    "packaged_sha256": "f6fa3fedb2e40c4da5cb3fa876ec44d4812f0a4268b5896528208eda932693d0",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/plot_ex1.py",
+    "destination": "research/ex1_2/plot_ex1.py",
+    "source_sha256": "7232af2fb4c1db48449b69d3b79b1b410a21445f47eed0f5acc7975c478f3c0a",
+    "packaged_sha256": "7232af2fb4c1db48449b69d3b79b1b410a21445f47eed0f5acc7975c478f3c0a",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/plot_ex2.py",
+    "destination": "research/ex1_2/plot_ex2.py",
+    "source_sha256": "74cebcf3b68f52439164be7c3ee60a31eb15ae5278845842a6783178bcb75db3",
+    "packaged_sha256": "74cebcf3b68f52439164be7c3ee60a31eb15ae5278845842a6783178bcb75db3",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/plot_summary.py",
+    "destination": "research/ex1_2/plot_summary.py",
+    "source_sha256": "e3ab41e65d9542309f3c73d5040872fb74290ee8e0530efdd8dab06c16a2b500",
+    "packaged_sha256": "e3ab41e65d9542309f3c73d5040872fb74290ee8e0530efdd8dab06c16a2b500",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "ex1_2/run_pipeline.py",
+    "destination": "research/ex1_2/run_pipeline.py",
+    "source_sha256": "58351795466258437faa2de944a89d0b98ccf0a8084db91dd400b1241441b029",
+    "packaged_sha256": "58351795466258437faa2de944a89d0b98ccf0a8084db91dd400b1241441b029",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/generate_datasets6_transforms.py",
+    "destination": "research/exp4/generate_datasets6_transforms.py",
+    "source_sha256": "2dc04476ba64046d48d38c9227f7907189021d150b884db96572495ba92785ae",
+    "packaged_sha256": "2dc04476ba64046d48d38c9227f7907189021d150b884db96572495ba92785ae",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/generate_datasets7_transforms.py",
+    "destination": "research/exp4/generate_datasets7_transforms.py",
+    "source_sha256": "c4348f48bce1a4677681f8f7ff07272e7b2dd4be228f56057a8b145743e56d33",
+    "packaged_sha256": "c4348f48bce1a4677681f8f7ff07272e7b2dd4be228f56057a8b145743e56d33",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/logic_compare/run_comparison.py",
+    "destination": "research/exp4/logic_compare/run_comparison.py",
+    "source_sha256": "769e9dbe12912011b74eddc8d01f9d15d568c4bf8bb3b38a7dcc46f73ae1089e",
+    "packaged_sha256": "769e9dbe12912011b74eddc8d01f9d15d568c4bf8bb3b38a7dcc46f73ae1089e",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/plot_datasets7_least_similar.py",
+    "destination": "research/exp4/plot_datasets7_least_similar.py",
+    "source_sha256": "c70cf9ae8544183adce2098b4c11390c223c112b2f025eda5d355304e80e8606",
+    "packaged_sha256": "c70cf9ae8544183adce2098b4c11390c223c112b2f025eda5d355304e80e8606",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/plot_datasets7_top10_most_similar_negative_pairs.py",
+    "destination": "research/exp4/plot_datasets7_top10_most_similar_negative_pairs.py",
+    "source_sha256": "1f5bdac4df1b3fb800e78e57e5faa78474ca6ca318d93a2ff9a0d3e83483f34a",
+    "packaged_sha256": "1f5bdac4df1b3fb800e78e57e5faa78474ca6ca318d93a2ff9a0d3e83483f34a",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/plot_f1_vs_clip_top10_large.py",
+    "destination": "research/exp4/plot_f1_vs_clip_top10_large.py",
+    "source_sha256": "937e1515556f017fe49e8eb384df9b6699630f5c53de8caf696114adf01abf82",
+    "packaged_sha256": "937e1515556f017fe49e8eb384df9b6699630f5c53de8caf696114adf01abf82",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/plot_f1_vs_vit_top10_large.py",
+    "destination": "research/exp4/plot_f1_vs_vit_top10_large.py",
+    "source_sha256": "579be7c262b2ab897dc6702448fe04640e2f787a6fbd2954c1f18926c4826abd",
+    "packaged_sha256": "579be7c262b2ab897dc6702448fe04640e2f787a6fbd2954c1f18926c4826abd",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/replot_top10.py",
+    "destination": "research/exp4/replot_top10.py",
+    "source_sha256": "d85b36004b2faafbfc066a882cfb34a58b066ec42b388d3d8819d2296572452f",
+    "packaged_sha256": "d85b36004b2faafbfc066a882cfb34a58b066ec42b388d3d8819d2296572452f",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/run_datasets6_pipeline.py",
+    "destination": "research/exp4/run_datasets6_pipeline.py",
+    "source_sha256": "0f8ab3277fa429c720dde0694879cfa865d9413def17ef9c03267ca91cc8a5eb",
+    "packaged_sha256": "0f8ab3277fa429c720dde0694879cfa865d9413def17ef9c03267ca91cc8a5eb",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/run_datasets6_sweep.py",
+    "destination": "research/exp4/run_datasets6_sweep.py",
+    "source_sha256": "cd443d4c74a3baa5fe795a26ca54112f15ae15502754a277f982004f550d4d11",
+    "packaged_sha256": "cd443d4c74a3baa5fe795a26ca54112f15ae15502754a277f982004f550d4d11",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/run_datasets7_sweep.py",
+    "destination": "research/exp4/run_datasets7_sweep.py",
+    "source_sha256": "9fd7d6e6ce8cfbeac6805885b1f267b29ca5bb598b5ce7c707e8d30315840e22",
+    "packaged_sha256": "9fd7d6e6ce8cfbeac6805885b1f267b29ca5bb598b5ce7c707e8d30315840e22",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/run_exp4.py",
+    "destination": "research/exp4/run_exp4.py",
+    "source_sha256": "cceb69836b0e28eefb3bf4fe56a38963d19c71216700caeaefdefb9778ddfcb9",
+    "packaged_sha256": "cceb69836b0e28eefb3bf4fe56a38963d19c71216700caeaefdefb9778ddfcb9",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/run_single_model_comparison_sep14.py",
+    "destination": "research/exp4/run_single_model_comparison_sep14.py",
+    "source_sha256": "ba320d34543ee5b81baeff7d926cf948d817b828fff07eb8250639c1b01dc0dc",
+    "packaged_sha256": "ba320d34543ee5b81baeff7d926cf948d817b828fff07eb8250639c1b01dc0dc",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/summaryAug25/.pptx_build_threshold/build_weighted_threshold_slide.mjs",
+    "destination": "research/exp4/summaryAug25/.pptx_build_threshold/build_weighted_threshold_slide.mjs",
+    "source_sha256": "e8ee9f4a231141eff9b68693d456c179f865595e271460dac497eb06f285aedd",
+    "packaged_sha256": "ade3eb3a61e21816ca892d34bfa0486411456dcb125a408b9433cbe043202c8a",
+    "note": "Local output/input paths made relative; experiment logic unchanged"
+  },
+  {
+    "source": "exp4/threshold_eval/full_sweep/plot_comparison.py",
+    "destination": "research/exp4/threshold_eval/full_sweep/plot_comparison.py",
+    "source_sha256": "f015c9efebaa9807bc295d5afff659e9d2700f3bb708e7886bcb400289a187c2",
+    "packaged_sha256": "f015c9efebaa9807bc295d5afff659e9d2700f3bb708e7886bcb400289a187c2",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/threshold_eval/full_sweep_0_1.py",
+    "destination": "research/exp4/threshold_eval/full_sweep_0_1.py",
+    "source_sha256": "44f8c5a33ae2f57939f6d8917d28008fb4ea31dadb3ba785850c708102f35b83",
+    "packaged_sha256": "44f8c5a33ae2f57939f6d8917d28008fb4ea31dadb3ba785850c708102f35b83",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/threshold_eval/plot_heatmaps.py",
+    "destination": "research/exp4/threshold_eval/plot_heatmaps.py",
+    "source_sha256": "4c57532cf1cca5a2228ecc143c26d447e2e56538b7f7cd0edc031fea47493083",
+    "packaged_sha256": "4c57532cf1cca5a2228ecc143c26d447e2e56538b7f7cd0edc031fea47493083",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/threshold_eval/sweep_thresholds.py",
+    "destination": "research/exp4/threshold_eval/sweep_thresholds.py",
+    "source_sha256": "3ff349d165c222acfcf3a2748d50d108cf6ed7e0079371d0ce52d2d23cb4278f",
+    "packaged_sha256": "3ff349d165c222acfcf3a2748d50d108cf6ed7e0079371d0ce52d2d23cb4278f",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "final/compare.py",
+    "destination": "research/final/compare.py",
+    "source_sha256": "4fd26076545ed2a65568b7c1d0c7d195c174821225bac7778dc6fb22e87f9edb",
+    "packaged_sha256": "4fd26076545ed2a65568b7c1d0c7d195c174821225bac7778dc6fb22e87f9edb",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "gen_top10_vit_ds5.py",
+    "destination": "research/gen_top10_vit_ds5.py",
+    "source_sha256": "c2b8bd6ce3fe11396b8717a49873d379b8a4ea7df7bab2853c5682765a9ae7a1",
+    "packaged_sha256": "c2b8bd6ce3fe11396b8717a49873d379b8a4ea7df7bab2853c5682765a9ae7a1",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "generate_datasets5_transforms.py",
+    "destination": "research/generate_datasets5_transforms.py",
+    "source_sha256": "d2dad4f07dc68f247b9d5bfba2ddff509f6e5038ead9dd1a794b41a8404db22b",
+    "packaged_sha256": "d2dad4f07dc68f247b9d5bfba2ddff509f6e5038ead9dd1a794b41a8404db22b",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "generate_missing_transforms.py",
+    "destination": "research/generate_missing_transforms.py",
+    "source_sha256": "1e3229ef3d13f02022a3bb6a42032884b994cbacb152f1272e503678535d1d5d",
+    "packaged_sha256": "1e3229ef3d13f02022a3bb6a42032884b994cbacb152f1272e503678535d1d5d",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "opendata/scripts/extract_opendata.py",
+    "destination": "",
+    "source_sha256": "b48eac5e0e175b76cd089b63b78ea52bb93effebe72940795f7cbe4b035c8344",
+    "packaged_sha256": "",
+    "note": "External National Gallery of Art checkout; see THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/tests/conftest.py",
+    "destination": "",
+    "source_sha256": "e05965ecca1b50df6ff2600dd648bd3f9f85d98f4756aa13d764c5fe38f9b1ac",
+    "packaged_sha256": "",
+    "note": "External National Gallery of Art checkout; see THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/tests/test_csv_formatting.py",
+    "destination": "",
+    "source_sha256": "266c786db3c031d5e9e31bdc2a9e32248e695a228edaea7daf7a2e7435b75db7",
+    "packaged_sha256": "",
+    "note": "External National Gallery of Art checkout; see THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "opendata/tests/test_database.py",
+    "destination": "",
+    "source_sha256": "8cd04b322df4228e30219e996f0f42a40451334fd5864f622b428ba3d73846a8",
+    "packaged_sha256": "",
+    "note": "External National Gallery of Art checkout; see THIRD_PARTY_NOTICES.md"
+  },
+  {
+    "source": "pixiv/download_pixiv_first_1000.py",
+    "destination": "research/pixiv/download_pixiv_first_1000.py",
+    "source_sha256": "d9e9a7a8acb77b995ad909297fb977d9ef93532d6a86962a35833108d277f990",
+    "packaged_sha256": "d9e9a7a8acb77b995ad909297fb977d9ef93532d6a86962a35833108d277f990",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "run_datasets5_threshold.py",
+    "destination": "research/run_datasets5_threshold.py",
+    "source_sha256": "a22dadc8f2eecfe3089f13e394e7f513fb00c270c9a8af4fbd54dd0c214491b0",
+    "packaged_sha256": "a22dadc8f2eecfe3089f13e394e7f513fb00c270c9a8af4fbd54dd0c214491b0",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "run_threshold_eval_1000.py",
+    "destination": "research/run_threshold_eval_1000.py",
+    "source_sha256": "955adab880a96ab6aa6cd7ab13de6cfb0aa17d58c162c423bd2e0b9d407f21e1",
+    "packaged_sha256": "955adab880a96ab6aa6cd7ab13de6cfb0aa17d58c162c423bd2e0b9d407f21e1",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "run_threshold_eval_1000_v2.py",
+    "destination": "research/run_threshold_eval_1000_v2.py",
+    "source_sha256": "653288960d8ef3f512a8415f446829ab38c8fddbad354c8ccfa822a8b5a5dcf9",
+    "packaged_sha256": "653288960d8ef3f512a8415f446829ab38c8fddbad354c8ccfa822a8b5a5dcf9",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/core/auto_perception_ex1.py",
+    "destination": "research/src/core/auto_perception_ex1.py",
+    "source_sha256": "7ad606f8392365b958868c755433857aaa0b47a72652b45d3dabfbab6ab7c970",
+    "packaged_sha256": "7ad606f8392365b958868c755433857aaa0b47a72652b45d3dabfbab6ab7c970",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/core/auto_perception_ex2.py",
+    "destination": "research/src/core/auto_perception_ex2.py",
+    "source_sha256": "9bab01f36164b5d3db2c02a6cd7b3e1235307f0411397bfdd66ff7ee85f3726c",
+    "packaged_sha256": "9bab01f36164b5d3db2c02a6cd7b3e1235307f0411397bfdd66ff7ee85f3726c",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/core/clip_all_fallback_comparison.py",
+    "destination": "research/src/core/clip_all_fallback_comparison.py",
+    "source_sha256": "2991a2be661d0a7bfa165f7092f742c48829789b24b513484ffa22e0d79388b7",
+    "packaged_sha256": "2991a2be661d0a7bfa165f7092f742c48829789b24b513484ffa22e0d79388b7",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/core/generate_ex1.py",
+    "destination": "research/src/core/generate_ex1.py",
+    "source_sha256": "8b941c54f26fb708a42937eb1d8661869df2e91bcc42426926ca49868d281e1b",
+    "packaged_sha256": "8b941c54f26fb708a42937eb1d8661869df2e91bcc42426926ca49868d281e1b",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/core/generate_ex2.py",
+    "destination": "research/src/core/generate_ex2.py",
+    "source_sha256": "f6fa3fedb2e40c4da5cb3fa876ec44d4812f0a4268b5896528208eda932693d0",
+    "packaged_sha256": "f6fa3fedb2e40c4da5cb3fa876ec44d4812f0a4268b5896528208eda932693d0",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/core/similarity.py",
+    "destination": "research/src/core/similarity.py",
+    "source_sha256": "9606439163fb6ea822043af7302dbebfc901a9fa6992277e837d2173b903400e",
+    "packaged_sha256": "9606439163fb6ea822043af7302dbebfc901a9fa6992277e837d2173b903400e",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/core/threshold.py",
+    "destination": "research/src/core/threshold.py",
+    "source_sha256": "b5c4e8b55236bbbfda6347f3daa7dbcfa791f835f764305b4fca792dc4830ebe",
+    "packaged_sha256": "b5c4e8b55236bbbfda6347f3daa7dbcfa791f835f764305b4fca792dc4830ebe",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/core/vit_all_fallback_4thresholds.py",
+    "destination": "research/src/core/vit_all_fallback_4thresholds.py",
+    "source_sha256": "82f3c7d392e8b5bfe152182f16357a49d756a7d3d29ac6fa621041c00cb46399",
+    "packaged_sha256": "82f3c7d392e8b5bfe152182f16357a49d756a7d3d29ac6fa621041c00cb46399",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/pipelines/benchmark_pipeline.py",
+    "destination": "research/src/pipelines/benchmark_pipeline.py",
+    "source_sha256": "4a92246cc6207fb7239ea99f824f4fb8675c5a8a7ec39296fe260a7a191e2d2f",
+    "packaged_sha256": "4a92246cc6207fb7239ea99f824f4fb8675c5a8a7ec39296fe260a7a191e2d2f",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/pipelines/resume_ex3.py",
+    "destination": "research/src/pipelines/resume_ex3.py",
+    "source_sha256": "707ef5004e22590e83cbea4dbcb06ccefee26e859f9bd1df5221e901d1d344d5",
+    "packaged_sha256": "707ef5004e22590e83cbea4dbcb06ccefee26e859f9bd1df5221e901d1d344d5",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/pipelines/run_7algo_similarity.py",
+    "destination": "research/src/pipelines/run_7algo_similarity.py",
+    "source_sha256": "50f9363015a045cc6098b8f9dd534ec1141fe37582a39087d827fd09f976654d",
+    "packaged_sha256": "50f9363015a045cc6098b8f9dd534ec1141fe37582a39087d827fd09f976654d",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/pipelines/run_combined_200.py",
+    "destination": "research/src/pipelines/run_combined_200.py",
+    "source_sha256": "497066f375f00ce4aa84fcc05675acc79e0fe0df35ebd9d7111095f70eb85755",
+    "packaged_sha256": "497066f375f00ce4aa84fcc05675acc79e0fe0df35ebd9d7111095f70eb85755",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/pipelines/run_ex3.py",
+    "destination": "research/src/pipelines/run_ex3.py",
+    "source_sha256": "d8f22ba8fc104339090738f5509fd97d81e6c22253eb3aa3d4a273371c0fbd59",
+    "packaged_sha256": "d8f22ba8fc104339090738f5509fd97d81e6c22253eb3aa3d4a273371c0fbd59",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/pipelines/run_pipeline.py",
+    "destination": "research/src/pipelines/run_pipeline.py",
+    "source_sha256": "58351795466258437faa2de944a89d0b98ccf0a8084db91dd400b1241441b029",
+    "packaged_sha256": "58351795466258437faa2de944a89d0b98ccf0a8084db91dd400b1241441b029",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/pipelines/run_threshold_sweep.py",
+    "destination": "research/src/pipelines/run_threshold_sweep.py",
+    "source_sha256": "c1e5008e6246b2c7773e3db8dded002d3b45d402f29fe997dcb78ccfa03d7150",
+    "packaged_sha256": "c1e5008e6246b2c7773e3db8dded002d3b45d402f29fe997dcb78ccfa03d7150",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/plotting/plot_abs_negative_pairs.py",
+    "destination": "research/src/plotting/plot_abs_negative_pairs.py",
+    "source_sha256": "16c7cbcffbeede7200a5fdb0c2875bd7d4e704729935c58c798aedd0d0becde9",
+    "packaged_sha256": "16c7cbcffbeede7200a5fdb0c2875bd7d4e704729935c58c798aedd0d0becde9",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/plotting/plot_ex1.py",
+    "destination": "research/src/plotting/plot_ex1.py",
+    "source_sha256": "7232af2fb4c1db48449b69d3b79b1b410a21445f47eed0f5acc7975c478f3c0a",
+    "packaged_sha256": "7232af2fb4c1db48449b69d3b79b1b410a21445f47eed0f5acc7975c478f3c0a",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/plotting/plot_ex2.py",
+    "destination": "research/src/plotting/plot_ex2.py",
+    "source_sha256": "74cebcf3b68f52439164be7c3ee60a31eb15ae5278845842a6783178bcb75db3",
+    "packaged_sha256": "74cebcf3b68f52439164be7c3ee60a31eb15ae5278845842a6783178bcb75db3",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/plotting/plot_summary.py",
+    "destination": "research/src/plotting/plot_summary.py",
+    "source_sha256": "e3ab41e65d9542309f3c73d5040872fb74290ee8e0530efdd8dab06c16a2b500",
+    "packaged_sha256": "e3ab41e65d9542309f3c73d5040872fb74290ee8e0530efdd8dab06c16a2b500",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/utils/__init__.py",
+    "destination": "research/src/utils/__init__.py",
+    "source_sha256": "bccec2151e952cc4e0cc479adf0a7cdeb5c2171aba805b122e25cc571b63ed6a",
+    "packaged_sha256": "bccec2151e952cc4e0cc479adf0a7cdeb5c2171aba805b122e25cc571b63ed6a",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "src/utils/file_manager.py",
+    "destination": "research/src/utils/file_manager.py",
+    "source_sha256": "ab333693956f187002108dcf68a37ef84965bff03c2eaf6d0cf63fe09280a95e",
+    "packaged_sha256": "ab333693956f187002108dcf68a37ef84965bff03c2eaf6d0cf63fe09280a95e",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "README.md",
+    "destination": "research/README.historical.md",
+    "source_sha256": "f7de2e7f737f376643ecf152c9d72a7c1e05818edd8430b8e8ad5426748b95e7",
+    "packaged_sha256": "f7de2e7f737f376643ecf152c9d72a7c1e05818edd8430b8e8ad5426748b95e7",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "requirements.txt",
+    "destination": "research/requirements.txt",
+    "source_sha256": "c0bf813450519db1a77d50e41936ca3022db8d5f9f5914a3150f12e69ddfc2c3",
+    "packaged_sha256": "c0bf813450519db1a77d50e41936ca3022db8d5f9f5914a3150f12e69ddfc2c3",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "Aug27/README.md",
+    "destination": "research/Aug27/README.md",
+    "source_sha256": "6d312272b09ec97b324120445485f13fa01e6418d6670259791fe5408c291ca7",
+    "packaged_sha256": "68c26e75bfdefa80c053fddeba24b9a410e65cb77aa6b16b4b8cd2613e5f0881",
+    "note": "Historical text; personal interpreter paths redacted"
+  },
+  {
+    "source": "Aug27/requirements.txt",
+    "destination": "research/Aug27/requirements.txt",
+    "source_sha256": "ca389d19e921e55ead768583eb4761fe1c34f587807bc4d30bf5dbe8cc427c6a",
+    "packaged_sha256": "ca389d19e921e55ead768583eb4761fe1c34f587807bc4d30bf5dbe8cc427c6a",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/datasets_experiments.md",
+    "destination": "research/analysis/datasets_experiments.md",
+    "source_sha256": "d26f5327e70dfc7d9b3107f606dee7961e019c5867eac34793391f08c6eb5f72",
+    "packaged_sha256": "d26f5327e70dfc7d9b3107f606dee7961e019c5867eac34793391f08c6eb5f72",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/README.md",
+    "destination": "research/exp4/README.md",
+    "source_sha256": "4d21c1686e7ba0432025c4d2e081e1069607bcf34220f1a9cd4efb666f96e57a",
+    "packaged_sha256": "4d21c1686e7ba0432025c4d2e081e1069607bcf34220f1a9cd4efb666f96e57a",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/ComprehensiveAnalysisAug3/README.md",
+    "destination": "research/analysis/ComprehensiveAnalysisAug3/README.md",
+    "source_sha256": "6be725718657719c0b95cde165ece07ed6cc44b1ccc14b9b96b0074d6e53868e",
+    "packaged_sha256": "6be725718657719c0b95cde165ece07ed6cc44b1ccc14b9b96b0074d6e53868e",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "PaperFigures_Sep14/09_method_comparison/README.md",
+    "destination": "research/PaperFigures_Sep14/09_method_comparison/README.md",
+    "source_sha256": "38db6619d8477900bccaec2aab077637eb6cfd4bab8b810ad6351c303f8ec21f",
+    "packaged_sha256": "1d2bea9a12a152b69ee8c0f93db2ee0166757535612108788845325ddfc42966",
+    "note": "Historical text; personal interpreter paths redacted"
+  },
+  {
+    "source": "docs/image_registration_workflow.md",
+    "destination": "research/docs/image_registration_workflow.md",
+    "source_sha256": "fbd9e8942d67024f3817857bdf5abbdcbde9207129c6b26a0366bc988e51a6ff",
+    "packaged_sha256": "fbd9e8942d67024f3817857bdf5abbdcbde9207129c6b26a0366bc988e51a6ff",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "experiment_registration_flowchart.md",
+    "destination": "research/experiment_registration_flowchart.md",
+    "source_sha256": "06a411dae2cf12723d4ac5fea0c1faf81202ee9abc64fddccafe86fcc83f6f66",
+    "packaged_sha256": "06a411dae2cf12723d4ac5fea0c1faf81202ee9abc64fddccafe86fcc83f6f66",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "experiment_registration_flowchart.mmd",
+    "destination": "research/experiment_registration_flowchart.mmd",
+    "source_sha256": "78aa2ea251af61942dc51087293b284ee818079513fccd2f3cc3763c18a5a641",
+    "packaged_sha256": "78aa2ea251af61942dc51087293b284ee818079513fccd2f3cc3763c18a5a641",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "paper_outline_artbench_wikiart.md",
+    "destination": "research/paper_outline_artbench_wikiart.md",
+    "source_sha256": "bb95ae2aecdcf412978dc2b887463eece1a84cafa55e85244973571ed518e8ed",
+    "packaged_sha256": "bb95ae2aecdcf412978dc2b887463eece1a84cafa55e85244973571ed518e8ed",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": ".ppt_build_weighting/formula_count.png",
+    "destination": "research/.ppt_build_weighting/formula_count.png",
+    "source_sha256": "e8b727efe69a915dc38ca221ebd9b2e4db6f4c3325f732d0c2dd502379f3d06e",
+    "packaged_sha256": "e8b727efe69a915dc38ca221ebd9b2e4db6f4c3325f732d0c2dd502379f3d06e",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": ".ppt_build_weighting/formula_weight.png",
+    "destination": "research/.ppt_build_weighting/formula_weight.png",
+    "source_sha256": "e3b246ad5877dda558fa7b53ed979feb58bfef1c5488c0471cdfd1ab6c437135",
+    "packaged_sha256": "e3b246ad5877dda558fa7b53ed979feb58bfef1c5488c0471cdfd1ab6c437135",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": ".ppt_build_weighting/formula_objective.png",
+    "destination": "research/.ppt_build_weighting/formula_objective.png",
+    "source_sha256": "f7a977d4c33506703d522ac515ae6f0592bb4e9c05d02fbcb1a323c55ad30d18",
+    "packaged_sha256": "f7a977d4c33506703d522ac515ae6f0592bb4e9c05d02fbcb1a323c55ad30d18",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "prototype/index.html",
+    "destination": "prototype/index.html",
+    "source_sha256": "edc7162d539cf1c9b43c1d22e58d5afeef8ad0d2836b08c2df7524dd880fba5b",
+    "packaged_sha256": "5c4ff114469cab89a89a52dcb61efc84c0508fa5acafbc466322bfc85a7e6208",
+    "note": "Original interface; demo artwork replaced with generated geometric fixture"
+  },
+  {
+    "source": "prototype/PRD.md",
+    "destination": "prototype/PRD.md",
+    "source_sha256": "8b6e43c33045dd9cf452edbfe1da175a675da2d491af10fe4dad7e1fec9c0d3e",
+    "packaged_sha256": "8b6e43c33045dd9cf452edbfe1da175a675da2d491af10fe4dad7e1fec9c0d3e",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "PaperFigures_Sep14/index.html",
+    "destination": "docs/FIGURES.md",
+    "source_sha256": "3a84935512c25cffeaa7e8b61c04b6f6484f9fa1a5ac33b945ea26d6c0013449",
+    "packaged_sha256": "64e807bfcf59d02892ea858e7ff85f21b6ffffd6944af74f0489164439c8500f",
+    "note": "Image gallery replaced by a curated figure index; dataset image panels excluded"
+  },
+  {
+    "source": "Aug27/extract_clip_vit_vectors.py",
+    "destination": "scripts/extract_vectors.py",
+    "source_sha256": "1af001cd72ddf615bfc4ba2a10d2960931ae56de99b327a36de64e6311b47e25",
+    "packaged_sha256": "865b893c913a4048b7a7aeca2e73e6f6c87ef7f5772e790e97fd86416188cf55",
+    "note": "Portable entry point derived from Aug27; explicit public model defaults, local overrides retained"
+  },
+  {
+    "source": "PaperFigures_Sep14/09_method_comparison/figA_rule_comparison.png",
+    "destination": "docs/figures/rule_comparison.png",
+    "source_sha256": "e894587f85deb66461db4947a696c55867a2f9811ed6b8d113855b070a4d840a",
+    "packaged_sha256": "e894587f85deb66461db4947a696c55867a2f9811ed6b8d113855b070a4d840a",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "PaperFigures_Sep14/09_method_comparison/figB_decision_space.png",
+    "destination": "docs/figures/decision_space.png",
+    "source_sha256": "19dcbc4c76ab0567e795b2ebb313f9796114c34208b4f69ddf96030fcf52f4be",
+    "packaged_sha256": "19dcbc4c76ab0567e795b2ebb313f9796114c34208b4f69ddf96030fcf52f4be",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "PaperFigures_Sep14/09_method_comparison/figC_precision_recall.png",
+    "destination": "docs/figures/precision_recall.png",
+    "source_sha256": "e2553b55ee8681139eef21e6647943968dbfecba29a8e84d64c309865c186271",
+    "packaged_sha256": "e2553b55ee8681139eef21e6647943968dbfecba29a8e84d64c309865c186271",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "PaperFigures_Sep14/06_robustness/all_7_metrics_combined.png",
+    "destination": "docs/figures/seven_metrics.png",
+    "source_sha256": "312216d1957c04e6d3452eea4cdbb4b52b5a25e1089232f0b8a95968d6035deb",
+    "packaged_sha256": "312216d1957c04e6d3452eea4cdbb4b52b5a25e1089232f0b8a95968d6035deb",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "PaperFigures_Sep14/06_robustness/rotation_7_metrics_comparison.png",
+    "destination": "docs/figures/rotation_robustness.png",
+    "source_sha256": "bfda8808ab1776077e92dd298db9ce3335d52986f4c16c983936878ba13dedd8",
+    "packaged_sha256": "bfda8808ab1776077e92dd298db9ce3335d52986f4c16c983936878ba13dedd8",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "PaperFigures_Sep14/07_baseline_comparison/cross_method_correlation.png",
+    "destination": "docs/figures/metric_correlation.png",
+    "source_sha256": "35e7287636d05a55a849ab1963d13957962598902ad5d1ab823136c54fa2611b",
+    "packaged_sha256": "35e7287636d05a55a849ab1963d13957962598902ad5d1ab823136c54fa2611b",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/datasets6_sweep/f1_heatmap.png",
+    "destination": "docs/figures/wikiart_threshold_heatmap.png",
+    "source_sha256": "3e52caead6a4d84d6979598c59d184d58fcc813bace5a74afb9b2f9678c7d23b",
+    "packaged_sha256": "3e52caead6a4d84d6979598c59d184d58fcc813bace5a74afb9b2f9678c7d23b",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/datasets7_sweep/f1_heatmap.png",
+    "destination": "docs/figures/pixiv_threshold_heatmap.png",
+    "source_sha256": "3eb66ef6be68be0c616953c41a77afbdf463f88e6af68f3b2406b9754fd16866",
+    "packaged_sha256": "3eb66ef6be68be0c616953c41a77afbdf463f88e6af68f3b2406b9754fd16866",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "experiments/time/pipeline_timing_chart.png",
+    "destination": "docs/figures/pipeline_timing.png",
+    "source_sha256": "f787c2c95aaf0ba7ab50b4759192c845dbfdc7df49fcd123ab6497516024c054",
+    "packaged_sha256": "f787c2c95aaf0ba7ab50b4759192c845dbfdc7df49fcd123ab6497516024c054",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "high_performance_region_weighting/slide-1.png",
+    "destination": "docs/figures/threshold_weighting.png",
+    "source_sha256": "d2e50993ced418ffe8d896b5fe9e4746e1f78321411fe7b600a3cabf8fefc821",
+    "packaged_sha256": "d2e50993ced418ffe8d896b5fe9e4746e1f78321411fe7b600a3cabf8fefc821",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/threshold_eval/full_sweep/threshold_sweep_summary.csv",
+    "destination": "results/reported/exp4/threshold_eval/full_sweep/threshold_sweep_summary.csv",
+    "source_sha256": "1f92802390e28fbdbdfbbccdd5be33ad4fee0b847402c28715135038d460a09d",
+    "packaged_sha256": "1f92802390e28fbdbdfbbccdd5be33ad4fee0b847402c28715135038d460a09d",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/threshold_eval/full_sweep/best_results.json",
+    "destination": "results/reported/exp4/threshold_eval/full_sweep/best_results.json",
+    "source_sha256": "713330ea86d850eb5744b60be2ceddff5bbe424e5d0747fae71c716cacb77679",
+    "packaged_sha256": "713330ea86d850eb5744b60be2ceddff5bbe424e5d0747fae71c716cacb77679",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/datasets6_sweep/threshold_sweep_summary.csv",
+    "destination": "results/reported/exp4/datasets6_sweep/threshold_sweep_summary.csv",
+    "source_sha256": "2b9c9f3961a6dd4d53429e1c99003eb24eee51435e13f028f80df4bb8f8af353",
+    "packaged_sha256": "2b9c9f3961a6dd4d53429e1c99003eb24eee51435e13f028f80df4bb8f8af353",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/datasets6_sweep/best_results.json",
+    "destination": "results/reported/exp4/datasets6_sweep/best_results.json",
+    "source_sha256": "ef1dbe80fc5a70b7641ca020e2674054bcaa8c24775e554554215a74908fb3ba",
+    "packaged_sha256": "ef1dbe80fc5a70b7641ca020e2674054bcaa8c24775e554554215a74908fb3ba",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/datasets7_sweep/threshold_sweep_summary.csv",
+    "destination": "results/reported/exp4/datasets7_sweep/threshold_sweep_summary.csv",
+    "source_sha256": "6de744d1020764f91e25009744beefb8c39c20082a3b4d7b0f7b8d229c8fc29b",
+    "packaged_sha256": "6de744d1020764f91e25009744beefb8c39c20082a3b4d7b0f7b8d229c8fc29b",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/datasets7_sweep/best_results.json",
+    "destination": "results/reported/exp4/datasets7_sweep/best_results.json",
+    "source_sha256": "b647bdb5f919e8b1a3c159f8d26a5e847bef038f81ac87403ecf3c5e8f5ee576",
+    "packaged_sha256": "b647bdb5f919e8b1a3c159f8d26a5e847bef038f81ac87403ecf3c5e8f5ee576",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/results/summary.json",
+    "destination": "results/reported/exp4/results/summary.json",
+    "source_sha256": "deb2fec6c8b8c38ed86db9b5668da809256039df7680a00603ede52d8f5b60b4",
+    "packaged_sha256": "deb2fec6c8b8c38ed86db9b5668da809256039df7680a00603ede52d8f5b60b4",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "exp4/logic_compare/summary_comparison.json",
+    "destination": "results/reported/exp4/logic_compare/summary_comparison.json",
+    "source_sha256": "d326b59b2bd7852abbcb365464b73043789016632c2148c9ff246e6a9eaac1aa",
+    "packaged_sha256": "d326b59b2bd7852abbcb365464b73043789016632c2148c9ff246e6a9eaac1aa",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/ComparisonSep14/single_model_metrics.json",
+    "destination": "results/reported/analysis/ComparisonSep14/single_model_metrics.json",
+    "source_sha256": "b195d5ddad2e0626d4cc7ea58d2cad1397afbf75df1e85c65e47a03745f46c22",
+    "packaged_sha256": "b195d5ddad2e0626d4cc7ea58d2cad1397afbf75df1e85c65e47a03745f46c22",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "experiments/time/benchmark_results.json",
+    "destination": "results/reported/experiments/time/benchmark_results.json",
+    "source_sha256": "0d1a2c0edba9d76303095cea676ae2f73840ca224f508ac33d2740b43246f393",
+    "packaged_sha256": "0d1a2c0edba9d76303095cea676ae2f73840ca224f508ac33d2740b43246f393",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "experiments/time/ex3_timing.json",
+    "destination": "results/reported/experiments/time/ex3_timing.json",
+    "source_sha256": "80ea3aecbfbce077984231dc5b482bd2bcb08a5ddcab4f4559bb96e7ebf63a86",
+    "packaged_sha256": "80ea3aecbfbce077984231dc5b482bd2bcb08a5ddcab4f4559bb96e7ebf63a86",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/similarity_matrices/cross_method_correlation.csv",
+    "destination": "results/reported/analysis/similarity_matrices/cross_method_correlation.csv",
+    "source_sha256": "16aabb43fbcd619ae8f46c8e9a7a58acfeb869e77294853838e20332c5211e5e",
+    "packaged_sha256": "16aabb43fbcd619ae8f46c8e9a7a58acfeb869e77294853838e20332c5211e5e",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_eval_datasets1/experiment_summary_20260707.json",
+    "destination": "results/reported/analysis/threshold_eval_datasets1/experiment_summary_20260707.json",
+    "source_sha256": "565edac3197e7d170b8a319a66f73167e0431565ec190923397f0878aaeb7672",
+    "packaged_sha256": "565edac3197e7d170b8a319a66f73167e0431565ec190923397f0878aaeb7672",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_eval_datasets2/threshold_grid.csv",
+    "destination": "results/reported/analysis/threshold_eval_datasets2/threshold_grid.csv",
+    "source_sha256": "c1f95afd0bcbe602a942a964991705f0387e2e4becc988b840e9947cb7cac26c",
+    "packaged_sha256": "c1f95afd0bcbe602a942a964991705f0387e2e4becc988b840e9947cb7cac26c",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_eval_datasets3/threshold_grid.csv",
+    "destination": "results/reported/analysis/threshold_eval_datasets3/threshold_grid.csv",
+    "source_sha256": "1bdebe0056583a43a14674f114028177e4475d8ba3f39c0460311e8271c2ed54",
+    "packaged_sha256": "1bdebe0056583a43a14674f114028177e4475d8ba3f39c0460311e8271c2ed54",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/threshold_eval_datasets5/threshold_grid.csv",
+    "destination": "results/reported/analysis/threshold_eval_datasets5/threshold_grid.csv",
+    "source_sha256": "5272fc2c6716672cb1f90dada8c41381ac83cf4d618a79e57331ce5320d71de4",
+    "packaged_sha256": "5272fc2c6716672cb1f90dada8c41381ac83cf4d618a79e57331ce5320d71de4",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/similarity_7algo/datasets2_2_plus_archive_200/ahash_similarity.csv",
+    "destination": "results/reported/analysis/similarity_7algo/datasets2_2_plus_archive_200/ahash_similarity.csv",
+    "source_sha256": "be7077906e61dc3c5bfcd155948cbe1350bbe12d93e825c08a30fbf2078cb944",
+    "packaged_sha256": "be7077906e61dc3c5bfcd155948cbe1350bbe12d93e825c08a30fbf2078cb944",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/similarity_7algo/datasets2_2_plus_archive_200/clip_similarity.csv",
+    "destination": "results/reported/analysis/similarity_7algo/datasets2_2_plus_archive_200/clip_similarity.csv",
+    "source_sha256": "aacddda853debb36e4e93b9cd448f20da2d553d08ace606c3e55d01a0e15d04b",
+    "packaged_sha256": "aacddda853debb36e4e93b9cd448f20da2d553d08ace606c3e55d01a0e15d04b",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/similarity_7algo/datasets2_2_plus_archive_200/dhash_similarity.csv",
+    "destination": "results/reported/analysis/similarity_7algo/datasets2_2_plus_archive_200/dhash_similarity.csv",
+    "source_sha256": "6594a693571b5618f8824f369032e54449f7303b2e706ed81d956c10ed4361ff",
+    "packaged_sha256": "6594a693571b5618f8824f369032e54449f7303b2e706ed81d956c10ed4361ff",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/similarity_7algo/datasets2_2_plus_archive_200/pdq_similarity.csv",
+    "destination": "results/reported/analysis/similarity_7algo/datasets2_2_plus_archive_200/pdq_similarity.csv",
+    "source_sha256": "cd455ce3953f927176f6765a3dd68eb270f09fe178cc40ada9e139fde92b5d92",
+    "packaged_sha256": "cd455ce3953f927176f6765a3dd68eb270f09fe178cc40ada9e139fde92b5d92",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/similarity_7algo/datasets2_2_plus_archive_200/phash_similarity.csv",
+    "destination": "results/reported/analysis/similarity_7algo/datasets2_2_plus_archive_200/phash_similarity.csv",
+    "source_sha256": "58cab376ede6420e34193926f9b8eb1954e6461d81ce2c9d61c3dbabf9b4ed5e",
+    "packaged_sha256": "58cab376ede6420e34193926f9b8eb1954e6461d81ce2c9d61c3dbabf9b4ed5e",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/similarity_7algo/datasets2_2_plus_archive_200/summary_stats.csv",
+    "destination": "results/reported/analysis/similarity_7algo/datasets2_2_plus_archive_200/summary_stats.csv",
+    "source_sha256": "308e3647f63c244bb3df1aad8b97d661b4c3f6252f2c03c9513996e21b9f2880",
+    "packaged_sha256": "308e3647f63c244bb3df1aad8b97d661b4c3f6252f2c03c9513996e21b9f2880",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/similarity_7algo/datasets2_2_plus_archive_200/vit_similarity.csv",
+    "destination": "results/reported/analysis/similarity_7algo/datasets2_2_plus_archive_200/vit_similarity.csv",
+    "source_sha256": "fe4d9838c7a585d8314c743486ade465bd449904b7f41bc4a95da5055b6129ff",
+    "packaged_sha256": "fe4d9838c7a585d8314c743486ade465bd449904b7f41bc4a95da5055b6129ff",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/similarity_7algo/datasets2_2_plus_archive_200/whash_similarity.csv",
+    "destination": "results/reported/analysis/similarity_7algo/datasets2_2_plus_archive_200/whash_similarity.csv",
+    "source_sha256": "a86299a7418acd37ba86c93942dbb9e260c6bd99578468744eddd73fd6521ea3",
+    "packaged_sha256": "a86299a7418acd37ba86c93942dbb9e260c6bd99578468744eddd73fd6521ea3",
+    "note": "Copied without content changes"
+  },
+  {
+    "source": "analysis/Papersep11/FNnFP/summary.json",
+    "destination": "results/reported/analysis/Papersep11/FNnFP/summary.json",
+    "source_sha256": "c8aff721392833723edbeb08afadc87cdadf547d0d0d7b809a7b753b25c63bd3",
+    "packaged_sha256": "043331f44fa2628ca756094bca4111d177f7d298fa1e7596aa891284997e7178",
+    "note": "FP/FN summary; machine-specific base paths replaced with relative labels"
+  }
+]

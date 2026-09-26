@@ -1,0 +1,83 @@
+[
+  {
+    "dataset": "artbench1k",
+    "file": "results/scores/artbench1k.npz",
+    "sha256": "e2f22aa6f916be8d2bf7fbd1c459f3cf21769f7123666d158492008cffbc556f",
+    "originals": 1000,
+    "positive_pairs": 31000,
+    "negative_pairs": 499500,
+    "dtype": "float32",
+    "score_mode": "signed cosine similarity",
+    "negative_order": "np.triu_indices(1000, k=1)",
+    "positive_order": "original cached positive order; 31 non-F2 variants per original",
+    "negative_clip_derivation": "Normalize orig_clip, then row-wise float32 sum of pairwise products; chunks of 4096",
+    "sources": [
+      {
+        "path": "analysis/threshold_eval_datasets5/embeddings/clip_embeddings.npz",
+        "sha256": "50a890ee4dbe7a7eb4b89fcd520dbf6a4a5a506e2e3d2b36eb717b61e0715e09"
+      },
+      {
+        "path": "exp4/results/positive_vit_similarities.npy",
+        "sha256": "ba24ec29e20b9dc789c80aa1d46e2f43d0c289c74bc855d335d0e35759ae0f5d"
+      },
+      {
+        "path": "analysis/threshold_eval_datasets5/embeddings/vit_neg_sims.npy",
+        "sha256": "bec8b633445c365d64424cf12a0152fa1d9cae4a835dc35894ffe24f77ae6302"
+      }
+    ]
+  },
+  {
+    "dataset": "wikiart1k",
+    "file": "results/scores/wikiart1k.npz",
+    "sha256": "d0d06196a4fc31cfb130a9eee7190b5f521ac23fdf30e31fa65b018f04388e33",
+    "originals": 1000,
+    "positive_pairs": 31000,
+    "negative_pairs": 499500,
+    "dtype": "float32",
+    "score_mode": "signed cosine similarity",
+    "negative_order": "np.triu_indices(1000, k=1)",
+    "positive_order": "original cached positive order; 31 non-F2 variants per original",
+    "negative_clip_derivation": "Normalize orig_clip, then row-wise float32 sum of pairwise products; chunks of 4096",
+    "sources": [
+      {
+        "path": "exp4/datasets6_sweep/embeddings/clip_embeddings.npz",
+        "sha256": "7f0f847698d9d8fc6c2d3165a0a10011091d5666c853e898b23e5cd76aa6d913"
+      },
+      {
+        "path": "exp4/datasets6_sweep/embeddings/vit_pos_sims.npy",
+        "sha256": "720dcb1611fd58bd4a90234ef7000bb24888886e9f91725010fa53de1d230402"
+      },
+      {
+        "path": "exp4/datasets6_sweep/embeddings/vit_neg_sims.npy",
+        "sha256": "0b326e7403a37a0877f321259947248dc7c336e3fd41b04e86399073808ed0f4"
+      }
+    ]
+  },
+  {
+    "dataset": "pixiv1k",
+    "file": "results/scores/pixiv1k.npz",
+    "sha256": "1c0370a3be250b9e49c631a81e3263814bfa4f84e5bc7e4d45ad435bcef77503",
+    "originals": 1000,
+    "positive_pairs": 31000,
+    "negative_pairs": 499500,
+    "dtype": "float32",
+    "score_mode": "signed cosine similarity",
+    "negative_order": "np.triu_indices(1000, k=1)",
+    "positive_order": "original cached positive order; 31 non-F2 variants per original",
+    "negative_clip_derivation": "Normalize orig_clip, then row-wise float32 sum of pairwise products; chunks of 4096",
+    "sources": [
+      {
+        "path": "exp4/datasets7_sweep/embeddings/clip_embeddings.npz",
+        "sha256": "04d4bdbd2fc76b1e445244bd8783d5b20444811ff096c2ea619b5a2f18879eff"
+      },
+      {
+        "path": "exp4/datasets7_sweep/embeddings/vit_pos_sims.npy",
+        "sha256": "309d40ac4bec243b7fc62704c515f25404bbf5fb11c758901a2ee8871f841786"
+      },
+      {
+        "path": "exp4/datasets7_sweep/embeddings/vit_neg_sims.npy",
+        "sha256": "152718fefdb36a0fed3b27c9ca372724a99d303e7891e652814ec6206786efdc"
+      }
+    ]
+  }
+]

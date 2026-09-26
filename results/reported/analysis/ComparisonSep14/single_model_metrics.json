@@ -1,0 +1,124 @@
+{
+  "protocol": {
+    "clip_rule": "absolute CLIP cosine similarity > 0.87",
+    "vit_rule": "absolute ViT cosine similarity > 0.50",
+    "positive_definition": "original image paired with one of its 31 retained transformations",
+    "negative_definition": "unordered pair of two different original images"
+  },
+  "datasets": [
+    {
+      "dataset": "Datasets5",
+      "similarity": "absolute cosine similarity",
+      "clip_threshold": 0.87,
+      "vit_threshold": 0.5,
+      "clip_only": {
+        "positive_pairs": 31000,
+        "negative_pairs": 499500,
+        "total_pairs": 530500,
+        "TP": 30835,
+        "TN": 499164,
+        "FP": 336,
+        "FN": 165,
+        "accuracy": 0.9990556079170594,
+        "precision": 0.989220750056142,
+        "recall": 0.9946774193548387,
+        "f1": 0.9919415804796448,
+        "specificity": 0.9993273273273273,
+        "false_positive_rate": 0.0006726726726726806,
+        "false_negative_rate": 0.0053225806451613344
+      },
+      "vit_only": {
+        "positive_pairs": 31000,
+        "negative_pairs": 499500,
+        "total_pairs": 530500,
+        "TP": 30933,
+        "TN": 488528,
+        "FP": 10972,
+        "FN": 67,
+        "accuracy": 0.979191328934967,
+        "precision": 0.7381696694905142,
+        "recall": 0.9978387096774194,
+        "f1": 0.8485837734037447,
+        "specificity": 0.978034034034034,
+        "false_positive_rate": 0.021965965965966006,
+        "false_negative_rate": 0.0021612903225806113
+      }
+    },
+    {
+      "dataset": "Datasets6",
+      "similarity": "absolute cosine similarity",
+      "clip_threshold": 0.87,
+      "vit_threshold": 0.5,
+      "clip_only": {
+        "positive_pairs": 31000,
+        "negative_pairs": 499500,
+        "total_pairs": 530500,
+        "TP": 30826,
+        "TN": 499032,
+        "FP": 468,
+        "FN": 174,
+        "accuracy": 0.998789820923657,
+        "precision": 0.985045056560363,
+        "recall": 0.9943870967741936,
+        "f1": 0.9896940315279159,
+        "specificity": 0.999063063063063,
+        "false_positive_rate": 0.0009369369369369718,
+        "false_negative_rate": 0.0056129032258064315
+      },
+      "vit_only": {
+        "positive_pairs": 31000,
+        "negative_pairs": 499500,
+        "total_pairs": 530500,
+        "TP": 30934,
+        "TN": 488761,
+        "FP": 10739,
+        "FN": 66,
+        "accuracy": 0.9796324222431668,
+        "precision": 0.7423031699181725,
+        "recall": 0.9978709677419355,
+        "f1": 0.8513202977722126,
+        "specificity": 0.9785005005005005,
+        "false_positive_rate": 0.021499499499499475,
+        "false_negative_rate": 0.0021290322580644894
+      }
+    }
+  ],
+  "combined": {
+    "dataset": "Datasets5 + Datasets6",
+    "similarity": "absolute cosine similarity",
+    "clip_threshold": 0.87,
+    "vit_threshold": 0.5,
+    "clip_only": {
+      "positive_pairs": 62000,
+      "negative_pairs": 999000,
+      "total_pairs": 1061000,
+      "TP": 61661,
+      "TN": 998196,
+      "FP": 804,
+      "FN": 339,
+      "accuracy": 0.9989227144203582,
+      "precision": 0.9871287921235892,
+      "recall": 0.9945322580645162,
+      "f1": 0.990816695456554,
+      "specificity": 0.9991951951951952,
+      "false_positive_rate": 0.0008048048048048262,
+      "false_negative_rate": 0.0054677419354838275
+    },
+    "vit_only": {
+      "positive_pairs": 62000,
+      "negative_pairs": 999000,
+      "total_pairs": 1061000,
+      "TP": 61867,
+      "TN": 977289,
+      "FP": 21711,
+      "FN": 133,
+      "accuracy": 0.979411875589067,
+      "precision": 0.7402306827155472,
+      "recall": 0.9978548387096774,
+      "f1": 0.8499498550605173,
+      "specificity": 0.9782672672672673,
+      "false_positive_rate": 0.021732732732732685,
+      "false_negative_rate": 0.002145161290322606
+    }
+  }
+}

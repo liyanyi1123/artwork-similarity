@@ -1,0 +1,68 @@
+flowchart TD
+    START([开始])
+
+    subgraph STAGE1["阶段 1：数据准备"]
+        direction TB
+        DATASET[加载 2000 张数据集图片]
+        BASE_CLIP[逐张提取 CLIP 向量]
+        BASE_VIT[逐张提取 ViT 向量]
+        BASE_DB[(保存 2000 组基准向量<br/>CLIP 向量 + ViT 向量)]
+
+        DATASET --> BASE_CLIP
+        DATASET --> BASE_VIT
+        BASE_CLIP --> BASE_DB
+        BASE_VIT --> BASE_DB
+    end
+
+    subgraph STAGE2["阶段 2：用户图片向量计算"]
+        direction TB
+        INPUT[/用户输入一张待注册图片/]
+        QUERY_CLIP[计算该图片的 CLIP 向量]
+        QUERY_VIT[计算该图片的 ViT 向量]
+
+        INPUT --> QUERY_CLIP
+        INPUT --> QUERY_VIT
+    end
+
+    subgraph STAGE3["阶段 3：相似度计算与比较"]
+        direction TB
+        COMPARE[分别与 2000 张基准图片<br/>计算 CLIP 和 ViT 相似度]
+        ABS["对所有相似度取绝对值<br/>cᵢ = abs(sim_CLIP(i))<br/>vᵢ = abs(sim_ViT(i))"]
+        CHECK{"对所有 i = 1, …, 2000 均满足？<br/>cᵢ &lt; 0.87 且 vᵢ &lt; 0.50"}
+
+        COMPARE --> ABS --> CHECK
+    end
+
+    subgraph STAGE4["阶段 4：结果处理与入库"]
+        direction TB
+        PASS[判定通过]
+        SAVE[(将新图片的 CLIP 向量<br/>和 ViT 向量保存到数据库)]
+        SUCCESS([显示：注册成功])
+        FAIL[判定不通过]
+        FAILURE([显示：注册失败])
+
+        PASS --> SAVE --> SUCCESS
+        FAIL --> FAILURE
+    end
+
+    START --> DATASET
+    BASE_DB --> INPUT
+    BASE_DB -. 读取基准向量 .-> COMPARE
+    QUERY_CLIP --> COMPARE
+    QUERY_VIT --> COMPARE
+    CHECK -->|是| PASS
+    CHECK -->|否：任一图片越过任一阈值| FAIL
+
+    classDef startEnd fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    classDef data fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px,color:#0d47a1
+    classDef process fill:#ffffff,stroke:#455a64,stroke-width:1.5px,color:#263238
+    classDef decision fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#7f3700
+    classDef database fill:#e0f2f1,stroke:#00796b,stroke-width:2px,color:#004d40
+    classDef failure fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#8e0000
+
+    class START,SUCCESS startEnd
+    class DATASET,INPUT data
+    class BASE_CLIP,BASE_VIT,QUERY_CLIP,QUERY_VIT,COMPARE,ABS,PASS process
+    class CHECK decision
+    class BASE_DB,SAVE database
+    class FAIL,FAILURE failure

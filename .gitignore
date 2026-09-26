@@ -1,0 +1,34 @@
+# Local environments and tooling
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+
+# Runtime output, datasets and model weights
+/outputs/
+/models/
+/data/
+/research/models/
+/research/data/
+/research/dataset/
+/research/Transform/
+/research/Archive/
+/research/Datasets2_1/
+/research/Datasets2_2/
+/research/datasets7/
+/research/Datasets5/*/
+/research/Datasets6/*/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.log
+*.zip
+# Curated numeric caches under results/scores are deliberately tracked.

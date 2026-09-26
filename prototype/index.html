@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Art Registry Prototype</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #eef1f3;
+      --surface: #ffffff;
+      --surface-soft: #f7f8f8;
+      --ink: #182126;
+      --muted: #657077;
+      --line: #d8dee1;
+      --accent: #237b78;
+      --accent-dark: #175f5d;
+      --success: #267a50;
+      --success-bg: #edf7f1;
+      --danger: #ad423d;
+      --danger-bg: #fbefee;
+      --warning: #9b6b1d;
+      --focus: #176eaa;
+      --shadow: 0 10px 30px rgba(31, 43, 48, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+      letter-spacing: 0;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid rgba(23, 110, 170, 0.25);
+      outline-offset: 2px;
+    }
+
+    .topbar {
+      height: 64px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .topbar-inner {
+      width: min(1240px, calc(100% - 40px));
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .brand-name {
+      font-size: 17px;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .prototype-label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .account {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .page {
+      width: min(1240px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 30px 0 44px;
+    }
+
+    .page-heading {
+      margin-bottom: 20px;
+    }
+
+    .page-heading h1 {
+      margin: 0 0 7px;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 760;
+    }
+
+    .page-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .panel {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-header {
+      min-height: 66px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 720;
+    }
+
+    .panel-index {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .section {
+      padding: 20px;
+    }
+
+    .section + .section {
+      border-top: 1px solid var(--line);
+    }
+
+    .upload-box {
+      position: relative;
+      width: 100%;
+      height: 460px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border: 1.5px dashed #aeb9be;
+      border-radius: 6px;
+      background: #f4f6f6;
+      transition: border-color 160ms ease, background 160ms ease;
+    }
+
+    .upload-box.is-dragging {
+      border-color: var(--accent);
+      background: #edf6f5;
+    }
+
+    .upload-placeholder {
+      display: grid;
+      justify-items: center;
+      gap: 9px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .upload-symbol {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #9da9ae;
+      border-radius: 50%;
+      color: var(--accent-dark);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .upload-placeholder strong {
+      font-size: 16px;
+    }
+
+    .upload-placeholder span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .preview-image {
+      width: 100%;
+      height: 100%;
+      display: none;
+      object-fit: contain;
+      object-position: center;
+      background: #e9edef;
+    }
+
+    .upload-box.has-image .preview-image {
+      display: block;
+    }
+
+    .upload-box.has-image .upload-placeholder {
+      display: none;
+    }
+
+    .upload-actions {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .file-name {
+      min-width: 0;
+      flex: 1 1 180px;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 13px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .button {
+      min-height: 40px;
+      padding: 9px 15px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: var(--surface);
+      color: var(--ink);
+      font-weight: 650;
+      transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+    }
+
+    .button:hover {
+      border-color: #a8b2b7;
+      background: var(--surface-soft);
+    }
+
+    .button.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: white;
+    }
+
+    .button.primary:hover {
+      border-color: var(--accent-dark);
+      background: var(--accent-dark);
+    }
+
+    .button.danger {
+      border-color: #d9aaa6;
+      color: var(--danger);
+    }
+
+    .button:disabled {
+      cursor: not-allowed;
+      border-color: #d7dcde;
+      background: #e7eaeb;
+      color: #8c969b;
+    }
+
+    .button.is-loading {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+    }
+
+    .button.is-loading::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      flex: 0 0 auto;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: loading-spin 700ms linear infinite;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      min-width: 0;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 13px;
+      font-weight: 680;
+    }
+
+    .required {
+      color: var(--danger);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      min-height: 42px;
+      border: 1px solid #bdc7cb;
+      border-radius: 5px;
+      background: white;
+      color: var(--ink);
+      padding: 9px 11px;
+    }
+
+    .field textarea {
+      min-height: 76px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--focus);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(23, 110, 170, 0.12);
+    }
+
+    .declaration {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #465158;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .declaration input {
+      width: 17px;
+      height: 17px;
+      margin: 2px 0 0;
+      accent-color: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    .submit-row {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .submit-row .primary {
+      flex: 1;
+    }
+
+    .registration-result.success {
+      border-color: #b7d8c5;
+      box-shadow: 0 10px 30px rgba(38, 122, 80, 0.1);
+    }
+
+    .registration-result.failure {
+      border-color: #dfb8b5;
+      box-shadow: 0 10px 30px rgba(173, 66, 61, 0.1);
+    }
+
+    .registration-result:not(.hidden) {
+      animation: result-panel-enter 260ms ease-out both;
+    }
+
+    .result-state {
+      padding: 28px 24px;
+      display: grid;
+      grid-template-columns: 76px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .result-icon {
+      position: relative;
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      border: 2px solid currentColor;
+      border-radius: 50%;
+      animation: result-icon-enter 420ms cubic-bezier(0.2, 0.8, 0.2, 1) 80ms both;
+    }
+
+    .result-icon::after {
+      content: "";
+      position: absolute;
+      inset: -8px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      opacity: 0;
+      animation: result-ring 620ms ease-out 180ms both;
+    }
+
+    .result-icon.success {
+      background: var(--success-bg);
+      color: var(--success);
+    }
+
+    .result-icon.failure {
+      background: var(--danger-bg);
+      color: var(--danger);
+    }
+
+    .result-check {
+      width: 17px;
+      height: 30px;
+      border-right: 4px solid currentColor;
+      border-bottom: 4px solid currentColor;
+      transform: rotate(45deg) translate(-2px, -2px);
+      animation: result-mark-enter 260ms ease-out 250ms both;
+    }
+
+    .result-cross {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      animation: result-mark-enter 260ms ease-out 250ms both;
+    }
+
+    .result-cross::before,
+    .result-cross::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 2px;
+      width: 28px;
+      height: 4px;
+      border-radius: 2px;
+      background: currentColor;
+    }
+
+    .result-cross::before {
+      transform: rotate(45deg);
+    }
+
+    .result-cross::after {
+      transform: rotate(-45deg);
+    }
+
+    .result-copy {
+      min-width: 0;
+    }
+
+    .status-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .status-kicker.success {
+      color: var(--success);
+    }
+
+    .status-kicker.failure {
+      color: var(--danger);
+    }
+
+    .result-state h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      line-height: 1.28;
+    }
+
+    .result-summary {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .result-actions {
+      margin-top: 22px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .registration-number {
+      margin: 24px 0;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .registration-number span {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .registration-number strong {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @keyframes loading-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes result-panel-enter {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes result-icon-enter {
+      from {
+        opacity: 0;
+        transform: scale(0.72);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes result-ring {
+      from {
+        opacity: 0.45;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 0;
+        transform: scale(1.15);
+      }
+    }
+
+    @keyframes result-mark-enter {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .button.is-loading::before,
+      .registration-result:not(.hidden),
+      .result-icon,
+      .result-icon::after,
+      .result-check,
+      .result-cross {
+        animation: none;
+      }
+
+      .registration-result {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner,
+      .page {
+        width: min(100% - 24px, 1240px);
+      }
+
+      .account,
+      .prototype-label {
+        display: none;
+      }
+
+      .page {
+        padding-top: 22px;
+      }
+
+      .page-heading h1 {
+        font-size: 25px;
+      }
+
+      .panel-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .field-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .section,
+      .result-state {
+        padding: 16px;
+      }
+
+      .result-state {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .result-icon {
+        width: 64px;
+        height: 64px;
+      }
+
+      .upload-box {
+        height: 280px;
+      }
+
+      .submit-row,
+      .result-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">AR</div>
+        <div class="brand-name">Art Registry</div>
+        <div class="prototype-label">Concept prototype</div>
+      </div>
+      <div class="account">Artist account</div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page-heading">
+      <h1>Register a New Artwork</h1>
+      <p>Submit an artwork image and its details to create a registration record.</p>
+    </div>
+
+    <div class="workspace">
+      <form class="panel" id="artwork-form">
+        <div class="panel-header">
+          <h2 class="panel-title">Artwork Details</h2>
+        </div>
+
+        <section class="section">
+          <div class="upload-box" id="upload-box" tabindex="0" role="button" aria-label="Select artwork image">
+            <div class="upload-placeholder">
+              <div class="upload-symbol" aria-hidden="true">+</div>
+              <strong>Artwork Image</strong>
+              <span>JPG, PNG, or WebP, up to 20 MB</span>
+            </div>
+            <img class="preview-image" id="preview-image" alt="Preview of the selected artwork">
+          </div>
+          <input class="hidden" id="artwork-file" type="file" accept="image/jpeg,image/png,image/webp">
+
+          <div class="upload-actions">
+            <button class="button" id="choose-file" type="button">Choose Image</button>
+            <button class="button" id="load-demo" type="button">Load Demo Artwork</button>
+            <span class="file-name" id="file-name">No file selected</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="field-grid">
+            <div class="field full">
+              <label for="title">Artwork Title <span class="required">*</span></label>
+              <input id="title" name="title" type="text" autocomplete="off" required>
+            </div>
+            <div class="field">
+              <label for="artist">Artist Name <span class="required">*</span></label>
+              <input id="artist" name="artist" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="year">Year Created <span class="required">*</span></label>
+              <input id="year" name="year" type="number" min="1000" max="2026" required>
+            </div>
+            <div class="field full">
+              <label for="medium">Medium <span class="required">*</span></label>
+              <select id="medium" name="medium" required>
+                <option value="">Select a medium</option>
+                <option>Oil Painting</option>
+                <option>Acrylic</option>
+                <option>Watercolor</option>
+                <option>Printmaking</option>
+                <option>Digital Art</option>
+                <option>Photography</option>
+                <option>Mixed Media</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <label class="declaration">
+            <input id="declaration" type="checkbox" required>
+            <span>I confirm that I am authorized to submit this artwork and consent to the use of the uploaded image for similarity screening. The results are used only for the registration process and do not constitute a determination of copyright ownership or infringement.</span>
+          </label>
+          <div class="submit-row">
+            <button class="button primary" id="register-button" type="submit" disabled>Register Artwork</button>
+            <button class="button" id="reset-button" type="button">Reset</button>
+          </div>
+        </section>
+      </form>
+
+      <section class="panel registration-result hidden" id="registration-result" aria-live="polite" tabindex="-1">
+        <div id="result-content" class="result-state"></div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const form = document.querySelector("#artwork-form");
+    const uploadBox = document.querySelector("#upload-box");
+    const fileInput = document.querySelector("#artwork-file");
+    const chooseFileButton = document.querySelector("#choose-file");
+    const demoButton = document.querySelector("#load-demo");
+    const fileName = document.querySelector("#file-name");
+    const preview = document.querySelector("#preview-image");
+    const registerButton = document.querySelector("#register-button");
+    const resetButton = document.querySelector("#reset-button");
+    const resultPanel = document.querySelector("#registration-result");
+    const resultContent = document.querySelector("#result-content");
+
+    let hasImage = false;
+    let isDemoArtwork = false;
+    let isSubmitting = false;
+    let submissionTimer = null;
+
+    function updateSubmitState() {
+      const requiredFieldsReady = [...form.querySelectorAll("[required]")]
+        .every((field) => field.type === "checkbox" ? field.checked : field.value.trim() !== "");
+      registerButton.disabled = isSubmitting || !(hasImage && requiredFieldsReady);
+    }
+
+    function hideResult() {
+      resultPanel.classList.add("hidden");
+      resultPanel.classList.remove("success", "failure");
+      resultContent.innerHTML = "";
+    }
+
+    function clearArtworkDetails() {
+      document.querySelector("#title").value = "";
+      document.querySelector("#artist").value = "";
+      document.querySelector("#year").value = "";
+      document.querySelector("#medium").value = "";
+      document.querySelector("#declaration").checked = false;
+    }
+
+    function setPreview(source, name, demoArtwork = false) {
+      preview.src = source;
+      uploadBox.classList.add("has-image");
+      fileName.textContent = name;
+      hasImage = true;
+      isDemoArtwork = demoArtwork;
+      hideResult();
+      updateSubmitState();
+    }
+
+    function loadFile(file) {
+      if (!file || !file.type.startsWith("image/")) return;
+      if (file.size > 20 * 1024 * 1024) {
+        window.alert("The image must be 20 MB or smaller.");
+        return;
+      }
+      const reader = new FileReader();
+      reader.addEventListener("load", () => {
+        clearArtworkDetails();
+        setPreview(reader.result, file.name, false);
+      });
+      reader.readAsDataURL(file);
+    }
+
+    function showResult(state) {
+      resultPanel.classList.remove("hidden", "success", "failure");
+      resultPanel.classList.add(state);
+      resultPanel.setAttribute("role", state === "failure" ? "alert" : "status");
+      resultPanel.setAttribute("aria-live", state === "failure" ? "assertive" : "polite");
+      resultPanel.focus({ preventScroll: true });
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      resultPanel.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest" });
+    }
+
+    function renderRegistrationSuccess() {
+      const title = document.querySelector("#title").value || "Untitled Artwork";
+      resultContent.innerHTML = `
+        <div class="result-icon success" aria-hidden="true"><span class="result-check"></span></div>
+        <div class="result-copy">
+          <div class="status-kicker success">Registration Successful</div>
+          <h2>Artwork Registered</h2>
+          <p class="result-summary">&ldquo;${escapeHtml(title)}&rdquo; has been registered successfully.</p>
+          <div class="registration-number">
+            <span>Registration ID</span>
+            <strong>AR-2026-0825-0042</strong>
+          </div>
+          <div class="result-actions">
+            <button class="button primary" type="button" data-action="start-over">Register Another Artwork</button>
+          </div>
+        </div>`;
+      showResult("success");
+    }
+
+    function renderRegistrationFailure() {
+      resultContent.innerHTML = `
+        <div class="result-icon failure" aria-hidden="true"><span class="result-cross"></span></div>
+        <div class="result-copy">
+          <div class="status-kicker failure">Registration Failed</div>
+          <h2>Artwork Could Not Be Registered</h2>
+          <p class="result-summary">The uploaded image is too similar to an artwork already in the registry. Choose a different artwork and try again.</p>
+          <div class="result-actions">
+            <button class="button danger" type="button" data-action="start-over">Choose Another Artwork</button>
+          </div>
+        </div>`;
+      showResult("failure");
+    }
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>'"]/g, (character) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "'": "&#39;",
+        "\"": "&quot;"
+      })[character]);
+    }
+
+    function resetPrototype() {
+      window.clearTimeout(submissionTimer);
+      form.reset();
+      fileInput.value = "";
+      preview.removeAttribute("src");
+      uploadBox.classList.remove("has-image", "is-dragging");
+      fileName.textContent = "No file selected";
+      hasImage = false;
+      isDemoArtwork = false;
+      isSubmitting = false;
+      registerButton.textContent = "Register Artwork";
+      registerButton.classList.remove("is-loading");
+      registerButton.removeAttribute("aria-busy");
+      registerButton.disabled = true;
+      hideResult();
+    }
+
+    chooseFileButton.addEventListener("click", () => fileInput.click());
+    uploadBox.addEventListener("click", () => fileInput.click());
+    uploadBox.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        fileInput.click();
+      }
+    });
+    fileInput.addEventListener("change", () => loadFile(fileInput.files[0]));
+
+    uploadBox.addEventListener("dragover", (event) => {
+      event.preventDefault();
+      uploadBox.classList.add("is-dragging");
+    });
+    uploadBox.addEventListener("dragleave", () => uploadBox.classList.remove("is-dragging"));
+    uploadBox.addEventListener("drop", (event) => {
+      event.preventDefault();
+      uploadBox.classList.remove("is-dragging");
+      loadFile(event.dataTransfer.files[0]);
+    });
+
+    demoButton.addEventListener("click", () => {
+      setPreview("../examples/synthetic.png", "synthetic.png", true);
+      document.querySelector("#title").value = "Synthetic demo pattern";
+      document.querySelector("#artist").value = "Demo Artist";
+      document.querySelector("#year").value = "2026";
+      document.querySelector("#medium").value = "Oil Painting";
+      document.querySelector("#declaration").checked = true;
+      updateSubmitState();
+    });
+
+    form.addEventListener("input", () => {
+      hideResult();
+      updateSubmitState();
+    });
+    form.addEventListener("change", () => {
+      hideResult();
+      updateSubmitState();
+    });
+    resetButton.addEventListener("click", resetPrototype);
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!hasImage || !form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      isSubmitting = true;
+      hideResult();
+      registerButton.disabled = true;
+      registerButton.textContent = "Registering...";
+      registerButton.classList.add("is-loading");
+      registerButton.setAttribute("aria-busy", "true");
+      submissionTimer = window.setTimeout(() => {
+        isSubmitting = false;
+        registerButton.textContent = "Register Artwork";
+        registerButton.classList.remove("is-loading");
+        registerButton.removeAttribute("aria-busy");
+        isDemoArtwork ? renderRegistrationFailure() : renderRegistrationSuccess();
+        updateSubmitState();
+      }, 1200);
+    });
+
+    resultContent.addEventListener("click", (event) => {
+      const action = event.target.closest("[data-action]")?.dataset.action;
+      if (action === "start-over") resetPrototype();
+    });
+  </script>
+</body>
+</html>

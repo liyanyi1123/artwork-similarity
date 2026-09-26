@@ -1,0 +1,2 @@
+# Lightweight cached-score evaluation and threshold sweeps.
+numpy>=1.26,<3

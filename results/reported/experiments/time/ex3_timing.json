@@ -1,0 +1,54 @@
+{
+  "experiment": "ex3",
+  "num_originals": 1000,
+  "num_variants_per_image": 32,
+  "num_transformed_total": 32000,
+  "num_algorithms": 7,
+  "device": "mps",
+  "batch_size": 16,
+  "steps": {
+    "generate": {
+      "elapsed_sec": 190.7,
+      "elapsed_fmt": "3m 10.7s"
+    },
+    "similarity": {
+      "clip": {
+        "embed_sec": 407.9,
+        "sim_sec": 0.0,
+        "total_sec": 409.0
+      },
+      "vit": {
+        "embed_sec": 1002.7,
+        "sim_sec": 0.0,
+        "total_sec": 1003.2
+      },
+      "ahash": {
+        "hash_sec": 112.3,
+        "sim_sec": 0.0,
+        "total_sec": 112.4
+      },
+      "phash": {
+        "hash_sec": 112.3,
+        "sim_sec": 0.0,
+        "total_sec": 112.4
+      },
+      "dhash": {
+        "hash_sec": 110.2,
+        "sim_sec": 0.0,
+        "total_sec": 110.2
+      },
+      "whash": {
+        "hash_sec": 439.8,
+        "sim_sec": 0.0,
+        "total_sec": 439.8
+      },
+      "pdq": {
+        "hash_sec": 615.7,
+        "sim_sec": 0.0,
+        "total_sec": 615.7
+      }
+    }
+  },
+  "total_elapsed_sec": 2993.4,
+  "total_elapsed_fmt": "49m 53.4s"
+}
